@@ -1,0 +1,695 @@
+
+/* ==========================================
+   1. GLOBAL VARIABLES & SYSTEM RESET
+   ========================================== */
+:root {
+    --primary-color: #06341d; /* Signature Deep Green */
+    --accent-color: #cca43b;  /* Premium Gold */
+    --text-dark: #1f2937;
+    --text-light: #ffffff;
+    --bg-light: #f9fafb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Flex layout allows footers to sit cleanly at the bottom */
+body {
+    background-color: #ffffff;
+    color: var(--text-dark);
+    padding-top: 80px; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   2. HEADER NAVIGATION BAR
+   ========================================== */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: 800;
+    padding: 6px 14px;
+    border-radius: 6px;
+}
+
+.logo-text h1 {
+    font-size: 22px;
+    letter-spacing: 1px;
+    line-height: 1;
+    color: var(--text-light);
+}
+
+.logo-text span {
+    font-size: 10px;
+    color: var(--accent-color);
+    letter-spacing: 3px;
+    display: block;
+    margin-top: 2px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: var(--accent-color);
+}
+
+.btn-nav {
+    background-color: var(--accent-color);
+    color: var(--primary-color) !important;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-weight: 700;
+}
+
+/* ==========================================
+   3. HOMEPAGE HERO SHOWCASE 
+   ========================================== */
+.hero {
+       background: linear-gradient(rgba(6, 52, 29, 0.8), rgba(6, 52, 29, 0.85)), url('image.png') no-repeat center center/cover;
+
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    color: var(--text-light);
+    width: 100%;
+}
+
+.hero-tagline {
+    color: var(--accent-color);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.hero-content h2 {
+    font-size: 52px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+
+.gold-text {
+    color: var(--accent-color);
+    font-style: italic;
+}
+
+.hero-subtext {
+    font-size: 18px;
+    margin-bottom: 35px;
+    opacity: 0.9;
+    color: var(--text-light);
+}
+
+.hero-cta {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary, .btn-secondary {
+    text-decoration: none;
+    padding: 14px 30px;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--text-light);
+}
+
+.btn-secondary {
+    border: 2px solid var(--text-light);
+    color: var(--text-light);
+}
+
+.btn-secondary:hover {
+    background-color: var(--text-light);
+    color: var(--primary-color);
+}
+
+/* ==========================================
+   4. HOME VALUES RIBBON BAR
+   ========================================== */
+.values-bar {
+    background-color: #f3f4f6;
+    padding: 22px 0;
+    border-bottom: 1px solid #e5e7eb;
+    width: 100%;
+}
+
+.values-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.value-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.value-item i {
+    color: var(--accent-color);
+    font-size: 18px;
+}
+
+/* ==========================================
+   5. CORE SERVICES & DISPLAYS 
+   ========================================== */
+.services-preview, .hotels-display, .fleet-showcase {
+    padding: 80px 0;
+    background-color: var(--bg-light);
+    flex: 1 0 auto; /* Fills remaining height safely */
+    width: 100%;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    color: var(--primary-color);
+    font-size: 32px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+.section-header p {
+    color: #4b5563;
+    margin-top: 15px;
+}
+
+.preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.preview-card {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border-top: 4px solid var(--primary-color);
+    text-align: center;
+}
+
+.preview-card i {
+    font-size: 36px;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.preview-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.preview-card p {
+    color: #6b7280;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   6. GLOBAL STRUCTURAL FOOTER
+   ========================================== */
+footer {
+    margin-top: auto; 
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 60px 0 20px;
+    width: 100%;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-brand h3 {
+    font-size: 26px;
+    font-style: italic;
+    color: var(--accent-color);
+    margin-bottom: 8px;
+    white-space: nowrap;
+}
+
+.footer-brand .motto {
+    font-size: 12px;
+    letter-spacing: 2px;
+    opacity: 0.9;
+}
+
+.footer-contact h4 {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.footer-contact p {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    white-space: nowrap;
+}
+
+.footer-contact i {
+    color: var(--accent-color);
+    margin-right: 8px;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    font-size: 13px;
+    color: #9ca3af;
+    width: 100%;
+}
+
+/* ==========================================
+   7. RESPONSIVE VIEWPORTS (MOBILE)
+   ========================================== */
+@media (max-width: 768px) {
+    .header-container { flex-direction: column; gap: 15px; }
+    nav ul { gap: 15px; flex-wrap: wrap; justify-content: center; }
+    .hero-content h2 { font-size: 34px; }
+    .hero-cta { flex-direction: column; }
+}
+/* ==========================================
+   8. HOTELS SPLIT-SCREEN LAYOUT CONFIG
+   ========================================== */
+.split-hotels-container {
+    display: flex;
+    height: calc(100vh - 80px); /* Fills view height safely minus nav header */
+    overflow: hidden;
+    width: 100%;
+}
+
+.split-half {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    transition: flex 0.5s ease, background 0.3s ease;
+    padding: 40px;
+}
+
+/* Fallback color gradients if you haven't assigned images inside your new images/ folder yet */
+.uganda-split {
+    background: linear-gradient(rgba(6, 52, 29, 0.8), rgba(6, 52, 29, 0.9)), url('images/uganda-split.jpg') no-repeat center center/cover;
+    background-color: var(--primary-color);
+}
+
+.rwanda-split {
+    background: linear-gradient(rgba(204, 164, 59, 0.75), rgba(6, 52, 29, 0.85)), url('images/rwanda-split.jpg') no-repeat center center/cover;
+    background-color: #1a422b;
+    border-left: 2px solid rgba(255,255,255,0.1);
+}
+
+.split-content {
+    color: var(--text-light) !important;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.split-content h2 {
+    font-size: 42px;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    color: var(--text-light) !important;
+}
+
+.split-content p {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 25px;
+    color: var(--text-light) !important;
+}
+
+.split-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: var(--text-light);
+    color: var(--primary-color);
+    font-weight: 700;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+/* Hover Expanding Window Animations */
+.split-half:hover {
+    flex: 1.2; 
+}
+
+.split-half:hover .split-content {
+    transform: scale(1.05);
+}
+
+.split-half:hover .split-btn {
+    background-color: var(--accent-color);
+    color: var(--text-light);
+}
+
+/* Mobile responsive fallback vertical stack */
+@media (max-width: 768px) {
+    .split-hotels-container {
+        flex-direction: column;
+        height: auto;
+    }
+    .split-half {
+        padding: 80px 20px;
+    }
+}
+
+/* ==========================================
+   9. SAFARIS PAGE EXTENSION
+   ========================================== */
+.page-title-bar {
+    padding: 60px 0;
+    text-align: center;
+    color: var(--text-light);
+    background-color: var(--primary-color);
+}
+
+.safari-hero-bg {
+    background: linear-gradient(rgba(6,52,29,0.85), rgba(6,52,29,0.9)), url('images/safari-hero.jpg') no-repeat center center/cover;
+}
+
+.page-title-bar h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.page-subtitle {
+    color: var(--accent-color);
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.safari-packages-section {
+    padding: 80px 0;
+    background-color: var(--bg-light);
+    flex: 1 0 auto;
+    width: 100%;
+}
+
+.package-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 35px;
+}
+
+.safari-card {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+}
+
+.safari-card-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    background-color: #dddddd;
+}
+
+.safari-card-body {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.safari-card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.safari-tag {
+    color: var(--accent-color);
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.safari-duration {
+    background: #f3f4f6;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.safari-card h3 {
+    color: var(--primary-color);
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.safari-card p {
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.safari-card-action {
+    margin-top: auto;
+}
+
+.btn-safari {
+    display: block;
+    text-align: center;
+    background: var(--primary-color);
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 13px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-safari:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+/* ==========================================
+   10. CONTACT PAGE EXTENSION
+   ========================================== */
+.contact-hero-bg {
+    background: linear-gradient(rgba(6,52,29,0.85), rgba(6,52,29,0.9)), url('images/contact-hero.jpg') no-repeat center center/cover;
+}
+
+.contact-section {
+    padding: 80px 0;
+    background-color: var(--bg-light);
+    flex: 1 0 auto;
+    width: 100%;
+}
+
+.contact-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 40px;
+    align-items: start;
+}
+
+.contact-info-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    border-left: 4px solid var(--accent-color);
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.info-card i {
+    font-size: 24px;
+    color: var(--primary-color);
+    background: #f0f4f1;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.info-card h3 {
+    color: var(--primary-color);
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.info-card p {
+    color: #555555;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.contact-form-panel {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--primary-color);
+}
+
+.contact-form-panel h3 {
+    color: var(--primary-color);
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.contact-form-panel p {
+    color: #666666;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    outline: none;
+    font-size: 14px;
+    color: var(--text-dark);
+    transition: border 0.3s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: var(--primary-color);
+}
+
+.btn-submit-contact {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 14px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.btn-submit-contact:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+
