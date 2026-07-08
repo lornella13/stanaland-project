@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Safari Packages & Expeditions | Stanaland Tour and Travel</title>
+    <!-- Core global layout connection -->
     <link rel="stylesheet" href="style.css">
+    <!-- Production FontAwesome Kit Connection for clean vector icons -->
     <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body>
@@ -26,7 +28,7 @@
                     <li><a href="hotels.html">Hotels</a></li>
                     <li><a href="safaris.html" class="active">Safaris</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
-                    <!-- <li><a href="#" class="btn-nav">Book Online</a></li> -->
+                    <li><a href="#" class="btn-nav">Book Online</a></li>
                 </ul>
             </nav>
         </div>
@@ -40,14 +42,20 @@
         </div>
     </section>
 
-    <!-- Safari Packages Grid Section -->
+    <!-- One Unified Safari Grid Section (All 9 together) -->
     <section class="safari-packages-section">
         <div class="container">
-            <div class="package-grid-layout">
+            <div class="panel-section-header" style="text-align: center; margin-bottom: 50px;">
+                <h2 style="color: #06341d; font-size: 32px;">Featured Tour Itineraries & Activities</h2>
+                <div style="width: 50px; height: 3px; background-color: #cca43b; margin: 12px auto 0;"></div>
+            </div>
+
+            <!-- Single Grid Container holding all 9 cards together -->
+            <div class="package-grid-layout" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 35px;">
                 
-                <!-- Package 1: Gorilla Trekking Bwindi -->
+                <!-- Card 1: Gorilla Trekking Bwindi -->
                 <div class="safari-card">
-                    <img src="Bwindi.png" alt="Gorilla Trekking Bwindi" class="safari-card-img">
+                    <img src="images/Bwindi.png" alt="Gorilla Trekking Bwindi" class="safari-card-img">
                     <div class="safari-card-body">
                         <div class="safari-card-meta">
                             <span class="safari-tag">Uganda Adventure</span>
@@ -56,14 +64,14 @@
                         <h3>Bwindi Gorilla Trekking Expedition</h3>
                         <p>Journey deep into Bwindi Impenetrable Forest for a once-in-a-lifetime encounter with endangered mountain gorillas. Package includes premium 4x4 transport, guides, and optional eco-lodge bookings.</p>
                         <div class="safari-card-action">
-                            <a href="https://wa.me." target="_blank" class="btn-safari">Inquire Package</a>
+                            <a href="contact.html" class="btn-hotel-book">Inquire Package</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Package 2: Murchison Falls wildlife -->
+                <!-- Card 2: Murchison Falls wildlife -->
                 <div class="safari-card">
-                    <img src="murchisson.png" alt="Murchison Falls Game Drive" class="safari-card-img">
+                    <img src="images/murchisson.png" alt="Murchison Falls Game Drive" class="safari-card-img">
                     <div class="safari-card-body">
                         <div class="safari-card-meta">
                             <span class="safari-tag">Wildlife Savannah</span>
@@ -72,14 +80,14 @@
                         <h3>Murchison Falls Highlights Tour</h3>
                         <p>Experience Africa's most powerful waterfall. Enjoy scenic game drives tracking lions, elephants, and leopards, topped off with a peaceful launch boat cruise up the River Nile.</p>
                         <div class="safari-card-action">
-                            <a href="https://wa.me." target="_blank" class="btn-safari">Inquire Package</a>
+                            <a href="contact.html" class="btn-hotel-book">Inquire Package</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Package 3: Rwanda Gorilla Nest & Cultural Tour -->
+                <!-- Card 3: Rwanda Gorilla Nest & Cultural Tour -->
                 <div class="safari-card">
-                    <img src="rwanda.png" alt="Volcanoes National Park Rwanda" class="safari-card-img">
+                    <img src="images/rwanda.png" alt="Volcanoes National Park Rwanda" class="safari-card-img">
                     <div class="safari-card-body">
                         <div class="safari-card-meta">
                             <span class="safari-tag">Rwanda Heritage</span>
@@ -88,32 +96,103 @@
                         <h3>Rwanda Volcanoes Luxury Safaris</h3>
                         <p>An exclusive cross-border transit safari into Volcanoes National Park Rwanda. Track Golden Monkeys, explore local heritage villages, and enjoy premium private transfers starting from Kigali.</p>
                         <div class="safari-card-action">
-                            <a href="https://wa.me." target="_blank" class="btn-safari">Inquire Package</a>
+                            <a href="contact.html" class="btn-hotel-book">Inquire Package</a>
                         </div>
                     </div>
                 </div>
 
-            </div>
-        </div>
-    </section>
+                <!-- Card 4: Chimpanzee Tracking -->
+                <div class="safari-card">
+                    <img src="images/chimpa.png" alt="Chimpanzee Tracking" class="safari-card-img">
+                    <div class="safari-card-body">
+                        <div class="safari-card-meta">
+                            <span class="safari-tag">Primate Safari</span>
+                            <span class="safari-duration">3 Days</span>
+                        </div>
+                        <h3>Kibale Forest Chimpanzee Tracking</h3>
+                        <p>Track our closest wild relatives through dense tropical jungle foliage in Kibale Forest National Park or the deep woods of Nyungwe Forest, led by expert local trackers.</p>
+                        <div class="safari-card-action">
+                            <a href="contact.html" class="btn-hotel-book">Inquire Package</a>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Global Footer -->
-    <footer>
-        <div class="container footer-container">
-            <div class="footer-brand">
-                <h3>We take you there</h3>
-                <p class="motto">SAFELY, COMFORTABLY, ON TIME.</p>
-            </div>
-            <div class="footer-contact">
-                <h4>Direct Hotlines</h4>
-                <p><i class="fas fa-phone-alt"></i> +256 761 023 983</p>
-                <p><i class="fas fa-phone-alt"></i> +256 705 629 568</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Stanaland Tour and Travel. All Rights Reserved.</p>
-        </div>
-    </footer>
+                <!-- Card 5: Kazinga Channel Cruise -->
+                <div class="safari-card">
+                    <img src="images/kazinga.png" alt="Kazinga Channel Cruise" class="safari-card-img">
+                    <div class="safari-card-body">
+                        <div class="safari-card-meta">
+                            <span class="safari-tag">Queen Elizabeth Park</span>
+                            <span class="safari-duration">2 Days</span>
+                        </div>
+                        <h3>Kazinga Channel Cruise & Wildlife</h3>
+                        <p>Sail past vast numbers of wallowing hippos, lurking Nile crocodiles, and majestic elephant herds watering along the banks of this spectacular natural savannah oasis.</p>
+                        <div class="safari-card-action">
+                            <a href="contact.html" class="btn-hotel-book">Inquire Package</a>
+                        </div>
+                    </div>
+                </div>
 
-</body>
-</html>
+                <!-- Card 6: Tree-Climbing Lions -->
+                <div class="safari-card">
+                    <img src="images/climbinglions.png" alt="Tree-Climbing Lions" class="safari-card-img">
+                    <div class="safari-card-body">
+                        <div class="safari-card-meta">
+                            <span class="safari-tag">Ishasha Wilderness</span>
+                            <span class="safari-duration">3 Days</span>
+                        </div>
+                        <h3>Ishasha Tree-Climbing Lions Safari</h3>
+                        <p>Track and photograph the rare, iconic lions resting lazily on old sycamore fig tree branches across southwestern Uganda's remote upcountry plains.</p>
+                        <div class="safari-card-action">
+                            <a href="contact.html" class="btn-hotel-book">Inquire Package</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7: Cultural Expeditions -->
+                <div class="safari-card">
+                    <img src="images/ibyiwacu.png" alt="Cultural Expeditions" class="safari-card-img">
+                    <div class="safari-card-body">
+                        <div class="safari-card-meta">
+                            <span class="safari-tag">Cultural Heritage</span>
+                            <span class="safari-duration">4 Days</span>
+                        </div>
+                        <h3>East African Cultural & Heritage Tour</h3>
+                        <p>Immerse your journey in authentic community heritage at the Iby’Iwacu Cultural Village in Rwanda or experience the traditional forest paths of the Batwa people.</p>
+                        <div class="safari-card-action">
+                            <a href="contact.html" class="btn-hotel-book">Inquire Package</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8: Akagera Savannah Safari -->
+                <div class="safari-card">
+                    <img src="images/akagera.png" alt="Akagera Savannah Safari" class="safari-card-img">
+                    <div class="safari-card-body">
+                        <div class="safari-card-meta">
+                            <span class="safari-tag">Rwanda Big Five</span>
+                            <span class="safari-duration">4 Days</span>
+                        </div>
+                        <h3>Akagera National Park Savannah Drive</h3>
+                        <p>Embark on spectacular Big Five tracking game drives across the complex maze of wetland ecosystems, rolling hills, and open grasslands in Akagera, Rwanda.</p>
+                        <div class="safari-card-action">
+                            <a href="contact.html" class="btn-hotel-book">Inquire Package</a>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Card 8: Lake Victoria -->
+                <div class="safari-card">
+                    <img src="images/victoria.png" alt="Akagera Savannah Safari" class="safari-card-img">
+                    <div class="safari-card-body">
+                        <div class="safari-card-meta">
+                            <span class="safari-tag">Uganda Big Five</span>
+                            <span class="safari-duration">4 Days</span>
+                        </div>
+                        <h3>Akagera National Park Savannah Drive</h3>
+                        <p> Africa’s largest tropical lake and the ultimate starting point for a Ugandan adventure. Spanning over 68,000 square kilometres, this massive freshwater inland sea feeds the Nile River and shapes Uganda’s vibrant south. It provides a peaceful, tropical escape just minutes from Entebbe International Airport.</p>
+                        <div class="safari-card-action">
+                            <a href="contact.html" class="btn-hotel-book">Inquire Package</a>
+                        </div>
+                    </div>
+                </div>
+

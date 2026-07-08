@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top Hotels & Lodges in Rwanda | Stanaland Tour and Travel</title>
+    <title>Top 9 Premium Hotels & Lodges in Rwanda | Stanaland Tour and Travel</title>
+    <!-- Clean Shared Stylesheet Link -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cloudflare.com">
 </head>
@@ -22,85 +23,169 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Services & Fleet</a></li>
+                    <li><a href="services.html">Services & Fleet</a></li>
                     <li><a href="hotels.html" class="active">Hotels</a></li>
-                    <li><a href="#">Safaris</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#" class="btn-nav">Book Online</a></li>
+                    <li><a href="safaris.html">Safaris</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <!-- <li><a href="#" class="btn-nav">Book Online</a></li> -->
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Sub-Hero Page Header -->
-    <section class="page-title-bar" style="background: linear-gradient(rgba(6,52,29,0.85), rgba(6,52,29,0.9)), url('https://unsplash.com') no-repeat center center/cover; padding: 60px 0; text-align: center; color: #fff;">
+    <section class="page-title-bar rwanda-hotels-hero-bg">
         <div class="container">
-            <h2 style="font-size: 36px; margin-bottom: 10px;">Top Premium Hotels in Rwanda</h2>
-            <p style="color: #cca43b; font-size: 16px; letter-spacing: 1px;">Luxury & Eco-Lodges Handpicked Across Kigali and Safari Volcano Parks</p>
+            <h2>Top Premium Hotels in Rwanda</h2>
+            <p class="page-subtitle">Luxury & Eco-Lodges Handpicked Across Kigali and Volcano National Parks</p>
         </div>
     </section>
 
     <!-- Rwanda Hotels Grid -->
-    <section class="hotels-display" style="padding: 60px 0; background-color: #f9fafb;">
+    <section class="hotels-display">
         <div class="container">
-            <div class="hotel-grid-layout" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+            <div class="hotel-grid-layout">
                 
                 <!-- Rwanda Hotel 1 -->
-                <div class="hotel-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #e5e7eb;">
-                    <img src="Radisson.png" alt="Radisson Blu Kigali" style="width: 100%; height: 220px; object-fit: cover;">
-                    <div style="padding: 25px;">
-                        <span style="color: #cca43b; font-size: 12px; font-weight: bold; text-transform: uppercase;">Kigali · 5-Star Premium</span>
-                        <h3 style="color: #06341d; margin: 8px 0 12px; font-size: 20px;">Radisson Blu Hotel & Convention Centre</h3>
-                        <p style="color: #555; font-size: 14px; line-height: 1.6; margin-bottom: 20px;">An iconic architectural landmark in Kigali featuring high-end luxury rooms, fine dining restaurants, and excellent proximity to Kigali International Airport.</p>
-                        <a href="https://wa.me." target="_blank" style="display: block; text-align: center; background: #06341d; color: #fff; text-decoration: none; padding: 12px; border-radius: 4px; font-weight: bold;">Book via WhatsApp</a>
+                <div class="hotel-card">
+                    <img src="images/Radisson.png" alt="Radisson Blu Kigali" class="hotel-card-img">
+                    <div class="hotel-card-body">
+                        <div class="hotel-card-meta">
+                            <span class="hotel-location"><i class="fas fa-map-marker-alt"></i> Kigali City</span>
+                            <span class="hotel-rating">5-Star Premium</span>
+                        </div>
+                        <h3>Radisson Blu Hotel & Convention Centre</h3>
+                        <p>An iconic architectural landmark in Kigali featuring high-end luxury rooms, fine dining restaurants, and excellent proximity to Kigali International Airport.</p>
+                        <div class="hotel-card-action">
+                            <a href="contact.html" class="btn-hotel-book">Book a Ride</a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Rwanda Hotel 2 -->
-                <div class="hotel-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #e5e7eb;">
-                    <img src="https://unsplash.com" alt="One&Only Gorillas Nest" style="width: 100%; height: 220px; object-fit: cover;">
-                    <div style="padding: 25px;">
-                        <span style="color: #cca43b; font-size: 12px; font-weight: bold; text-transform: uppercase;">Volcanoes National Park · High-End Luxury</span>
-                        <h3 style="color: #06341d; margin: 8px 0 12px; font-size: 20px;">One&Only Gorilla's Nest</h3>
-                        <p style="color: #555; font-size: 14px; line-height: 1.6; margin-bottom: 20px;">Nestled among eucalyptus trees on the edge of Volcanoes National Park, offering ultra-luxurious individual forest lodges and private spa views.</p>
-                        <a href="https://wa.me." target="_blank" style="display: block; text-align: center; background: #06341d; color: #fff; text-decoration: none; padding: 12px; border-radius: 4px; font-weight: bold;">Book via WhatsApp</a>
+                <div class="hotel-card">
+                    <img src="images/one.png" alt="One&Only Gorillas Nest" class="hotel-card-img">
+                    <div class="hotel-card-body">
+                        <div class="hotel-card-meta">
+                            <span class="hotel-location"><i class="fas fa-map-marker-alt"></i> Volcanoes Park</span>
+                            <span class="hotel-rating">High-End Luxury</span>
+                        </div>
+                        <h3>One&Only Gorilla's Nest</h3>
+                        <p>Nestled among eucalyptus trees on the edge of Volcanoes National Park, offering ultra-luxurious individual forest lodges and private spa views.</p>
+                        <div class="hotel-card-action">
+                            <a href="contact.html" class="btn-hotel-book">Book a Ride</a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Rwanda Hotel 3 -->
-                <div class="hotel-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #e5e7eb;">
-                    <img src="https://unsplash.com" alt="Bisate Lodge" style="width: 100%; height: 220px; object-fit: cover;">
-                    <div style="padding: 25px;">
-                        <span style="color: #cca43b; font-size: 12px; font-weight: bold; text-transform: uppercase;">Volcanoes Park · Boutique Eco Lodge</span>
-                        <h3 style="color: #06341d; margin: 8px 0 12px; font-size: 20px;">Bisate Lodge</h3>
-                        <p style="color: #555; font-size: 14px; line-height: 1.6; margin-bottom: 20px;">Famous for its spherical luxury villas inspired by traditional Rwandan palace architecture, set dramatically inside an eroded volcanic cone.</p>
-                        <a href="https://wa.me." target="_blank" style="display: block; text-align: center; background: #06341d; color: #fff; text-decoration: none; padding: 12px; border-radius: 4px; font-weight: bold;">Book via WhatsApp</a>
+                <div class="hotel-card">
+                    <img src="images/bisate.png" alt="Bisate Lodge" class="hotel-card-img">
+                    <div class="hotel-card-body">
+                        <div class="hotel-card-meta">
+                            <span class="hotel-location"><i class="fas fa-map-marker-alt"></i> Volcanoes Park</span>
+                            <span class="hotel-rating">Boutique Eco Lodge</span>
+                        </div>
+                        <h3>Bisate Lodge</h3>
+                        <p>Famous for its spherical luxury villas inspired by traditional Rwandan palace architecture, set dramatically inside an eroded volcanic cone.</p>
+                        <div class="hotel-card-action">
+                            <a href="contact.html" class="btn-hotel-book">Book a Ride</a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Note: To avoid huge walls of code, you can copy-paste more hotel cards down here for remaining Rwanda properties like Kigali Serena Hotel, Singita Kwitonda Lodge, and Lake Kivu Serena Resort to complete your list. -->
+                <!-- Rwanda Hotel 4 -->
+                <div class="hotel-card">
+                    <img src="images/kigalis.png" alt="Kigali Serena Hotel" class="hotel-card-img">
+                    <div class="hotel-card-body">
+                        <div class="hotel-card-meta">
+                            <span class="hotel-location"><i class="fas fa-map-marker-alt"></i> Kigali City</span>
+                            <span class="hotel-rating">5-Star Luxury</span>
+                        </div>
+                        <h3>Kigali Serena Hotel</h3>
+                        <p>Perfectly situated on one of Kigali's most charming central avenues. This premium hotel offers absolute security, a grand swimming pool, executive dining spaces, and a magnificent layout built for relaxation.</p>
+                        <div class="hotel-card-action">
+                            <a href="contact.html" class="btn-hotel-book">Book a Ride</a>
+                        </div>
+                    </div>
+                </div>
 
-            </div>
-        </div>
-    </section>
+                <!-- Rwanda Hotel 5 -->
+                <div class="hotel-card">
+                    <img src="images/singita.png" alt="Singita Kwitonda Lodge" class="hotel-card-img">
+                    <div class="hotel-card-body">
+                        <div class="hotel-card-meta">
+                            <span class="hotel-location"><i class="fas fa-map-marker-alt"></i> Volcanoes Park</span>
+                            <span class="hotel-rating">Ultra-Luxury</span>
+                        </div>
+                        <h3>Singita Kwitonda Lodge</h3>
+                        <p>Sharing a direct boundary line with the Volcanoes National Park habitat. Features exquisite private suites with individual plunge pools, indoor and outdoor fireplaces, and front-row mountain views.</p>
+                        <div class="hotel-card-action">
+                            <a href="contact.html" class="btn-hotel-book">Book a Ride</a>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-container">
-            <div class="footer-brand">
-                <h3>We take you there</h3>
-                <p class="motto">SAFELY, COMFORTABLY, ON TIME.</p>
-            </div>
-            <div class="footer-contact">
-                <h4>Direct Hotlines</h4>
-                <p><i class="fas fa-phone-alt"></i> +256 761 023 983</p>
-                <p><i class="fas fa-phone-alt"></i> +256 705 629 568</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Stanaland Tour and Travel. All Rights Reserved.</p>
-        </div>
-    </footer>
+                <!-- Rwanda Hotel 6 -->
+                <div class="hotel-card">
+                    <img src="images/lakeki.png" alt="Lake Kivu Serena Resort" class="hotel-card-img">
+                    <div class="hotel-card-body">
+                        <div class="hotel-card-meta">
+                            <span class="hotel-location"><i class="fas fa-map-marker-alt"></i> Gisenyi Sands</span>
+                            <span class="hotel-rating">Beachfront Resort</span>
+                        </div>
+                        <h3>Lake Kivu Serena Hotel</h3>
+                        <p>Beautifully positioned on the white tropical sandy shores of Lake Kivu. Offers a peaceful, luxury lakeside holiday escape featuring watersport activities, volleyball fields, and brilliant dynamic sunset lounges.</p>
+                        <div class="hotel-card-action">
+                            <a href="contact.html" class="btn-hotel-book">Book a Ride</a>
+                        </div>
+                    </div>
+                </div>
 
-</body>
-</html>
+                <!-- Rwanda Hotel 7 -->
+                <div class="hotel-card">
+                    <img src="images/magashi.png" alt="Magashi Camp Akagera" class="hotel-card-img">
+                    <div class="hotel-card-body">
+                        <div class="hotel-card-meta">
+                            <span class="hotel-location"><i class="fas fa-map-marker-alt"></i> Akagera Park</span>
+                            <span class="hotel-rating">Luxury Savannah</span>
+                        </div>
+                        <h3>Magashi Camp (Akagera)</h3>
+                        <p>Overlooking the beautiful scenic waters of Lake Rwanyakazinga inside Akagera National Park. Offers premium tented luxury setups with top access to track leopards, lions, rhinos, and elephants.</p>
+                        <div class="hotel-card-action">
+                            <a href="contact.html" class="btn-hotel-book">Book a Ride</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rwanda Hotel 8 -->
+                <div class="hotel-card">
+                    <img src="images/Nyungwe.png" alt="One&Only Nyungwe House" class="hotel-card-img">
+                    <div class="hotel-card-body">
+                        <div class="hotel-card-meta">
+                            <span class="hotel-location"><i class="fas fa-map-marker-alt"></i> Nyungwe Forest</span>
+                            <span class="hotel-rating">Premium Rainforest</span>
+                        </div>
+                        <h3>One&Only Nyungwe House</h3>
+                        <p>Set dramatically amidst a working tea plantation on the edge of the ancient Nyungwe Rainforest. Features private wooden balcony structures perfect for authentic chimpanzee tracking and canopy walks.</p>
+                        <div class="hotel-card-action">
+                            <a href="contact.html" class="btn-hotel-book">Book a Ride</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rwanda Hotel 9 -->
+                <div class="hotel-card">
+                     <img src="images/MILLE.png" alt="One&Only Nyungwe House" class="hotel-card-img">
+                    <div class="hotel-card-body">
+                        <div class="hotel-card-meta">
+                            <span class="hotel-location"><i class="fas fa-map-marker-alt"></i> HOTEL DES MILLE COLLINES</span>
+                            <span class="hotel-rating">Premium Hotel</span>
+                        </div>
+                        <h3>HOTEL DES MILLE COLLINES</h3>
+                        <p>Hôtel des Mille Collines is a historic four-star luxury hotel located in the heart of Kigali’s central business district. Inaugurated in 1973, it is globally renowned for its real-life historical significance, having sheltered over 1,200 people during the 1994 genocide. Today, the property seamlessly blends its deep legacy with modern, upscale hospitality.</p>
+                        <div class="hotel-card-action">
+                            <a href="contact.html" class="btn-hotel-book">Book a Ride</a>
+                        </div>
+                    </div>
+                </div>

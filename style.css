@@ -115,14 +115,138 @@ nav ul li a:hover, nav ul li a.active {
 /* ==========================================
    3. HOMEPAGE HERO SHOWCASE 
    ========================================== */
+/* ==========================================
+   3. HOMEPAGE HERO SHOWCASE WITH SLIDER FIX
+   ========================================== */
 .hero {
-       background: linear-gradient(rgba(6, 52, 29, 0.8), rgba(6, 52, 29, 0.85)), url('image.png') no-repeat center center/cover;
-
+    position: relative; /* Essential to lock background layers underneath text */
     height: 75vh;
     display: flex;
     align-items: center;
     color: var(--text-light);
     width: 100%;
+    overflow: hidden; /* Stops wide images from spilling out of the screen */
+}
+
+/* New CSS container to control the sliding images layer */
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Sets slider in the background layer */
+}
+
+/* Individual slides configuration */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out; /* Controls how fast images fade into each other */
+}
+
+/* Shows the active visible slide image */
+.slide.active {
+    opacity: 1; 
+}
+
+/* Keeps your text content floating perfectly on top of the moving background */
+.hero-container {
+    position: relative;
+    z-index: 2; /* Forces text to sit safely on top of the images layer */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-tagline {
+    color: var(--accent-color);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.hero-content h2 {
+    font-size: 52px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+
+.gold-text {
+    color: var(--accent-color);
+    font-style: italic;
+}
+
+.hero-subtext {
+    font-size: 18px;
+    margin-bottom: 35px;
+    opacity: 0.9;
+    color: var(--text-light);
+}
+
+.hero-cta {
+    display: flex;
+    gap: 15px;
+}
+/* ==========================================
+   3. HOMEPAGE HERO SHOWCASE WITH SLIDER FIX
+   ========================================== */
+.hero {
+    position: relative; /* Essential to lock background layers underneath text */
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    color: var(--text-light);
+    width: 100%;
+    overflow: hidden; /* Stops wide images from spilling out of the screen */
+}
+
+/* New CSS container to control the sliding images layer */
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Sets slider in the background layer */
+}
+
+/* Individual slides configuration */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out; /* Controls how fast images fade into each other */
+}
+
+/* Shows the active visible slide image */
+.slide.active {
+    opacity: 1; 
+}
+
+/* Keeps your text content floating perfectly on top of the moving background */
+.hero-container {
+    position: relative;
+    z-index: 2; /* Forces text to sit safely on top of the images layer */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .hero-tagline {
@@ -691,5 +815,340 @@ footer {
     background-color: var(--accent-color);
     color: var(--primary-color);
 }
+
+/* ==========================================
+   11. HOTELS CARDS & LISTING ENGINE EXTENSION
+   ========================================== */
+.uganda-hotels-hero-bg {
+    background: linear-gradient(rgba(6,52,29,0.85), rgba(6,52,29,0.9)), url('images/uganda-hotels-banner.jpg') no-repeat center center/cover;
+}
+
+.hotel-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+}
+
+.hotel-card {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    border: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hotel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.hotel-card-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background-color: #dddddd; /* Fallback gray box until you load real images */
+}
+
+.hotel-card-body {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.hotel-card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.hotel-location {
+    color: #4b5563;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.hotel-location i {
+    color: var(--accent-color);
+    margin-right: 4px;
+}
+
+.hotel-rating {
+    background-color: #f3f4f6;
+    color: var(--primary-color);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.5px;
+}
+
+.hotel-card h3 {
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.hotel-card p {
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.hotel-card-action {
+    margin-top: auto; /* Keeps all WhatsApp booking buttons lined up at the card bottoms */
+}
+
+.btn-hotel-book {
+    display: block;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-hotel-book:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+/* ==========================================
+   12. SERVICES & FLEET VEHICLE ENGINE EXTENSION
+   ========================================== */
+.services-hero-bg {
+    background: linear-gradient(rgba(6,52,29,0.85), rgba(6,52,29,0.9)), url('images/services-hero.jpg') no-repeat center center/cover;
+}
+
+.services-preview-panel {
+    padding: 80px 0 40px;
+    background-color: var(--text-light);
+    width: 100%;
+}
+.services-row-layout {
+    display: grid;
+    /* Grid system automatically adapts columns layout elegantly for all 6 items */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+
+.service-feature-card {
+    background-color: var(--bg-light);
+    padding: 40px 30px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    border-top: 4px solid var(--primary-color);
+    text-align: center;
+}
+
+.service-feature-card i {
+    font-size: 36px;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.service-feature-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.service-feature-card p {
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Fleet Panels Layout Section */
+.fleet-showcase-panel {
+    padding: 60px 0 80px;
+    background-color: var(--bg-light);
+    flex: 1 0 auto;
+    width: 100%;
+}
+
+.panel-section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.panel-section-header h2 {
+    color: var(--primary-color);
+    font-size: 28px;
+    position: relative;
+}
+
+.header-divider-line {
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 12px auto 0;
+}
+
+.fleet-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 35px;
+}
+
+.fleet-vehicle-card {
+    background: var(--text-light);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    border: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.fleet-vehicle-card:hover {
+    transform: translateY(-5px);
+}
+
+.fleet-card-img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    background-color: #dddddd;
+}
+
+.fleet-card-body {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.fleet-card-body h3 {
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.fleet-card-body p {
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.fleet-card-action {
+    margin-top: auto;
+}
+
+.btn-hire-vehicle {
+    display: block;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 13px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-hire-vehicle:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* ==========================================
+   14. ADVANCED PREMIUM SERVICES BOXES STYLES
+   ========================================== */
+.service-feature-card {
+    padding: 0 !important; /* Resets outer borders to allow full background bleeding */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    overflow: hidden;
+    border-top: none !important; /* Removes old flat green line */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Image Background Assignments */
+.s-bg-airport { background-image: url('https://unsplash.com'); }
+.s-bg-city { background-image: url('https://unsplash.com'); }
+.s-bg-upcountry { background-image: url('https://unsplash.com'); }
+.s-bg-hire { background-image: url('https://unsplash.com'); }
+.s-bg-deliveries { background-image: url('https://unsplash.com'); }
+.s-bg-border { background-image: url('https://unsplash.com'); }
+
+/* Beautiful inner transparent shadow layer to ensure white text pops readable */
+.card-inner-overlay {
+    background: linear-gradient(to bottom, rgba(6, 52, 29, 0.82), rgba(3, 26, 15, 0.95));
+    padding: 40px 30px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.service-icon-box {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.service-feature-card h3 {
+    color: var(--accent-color) !important; /* Highlights header titles in sleek gold */
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.service-feature-card p {
+    color: rgba(255, 255, 255, 0.9) !important; /* Soft premium white text color */
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.service-card-action {
+    margin-top: auto; /* Push buttons uniformly down */
+    width: 100%;
+}
+
+.service-feature-card .btn-hotel-book {
+    background-color: var(--accent-color) !important;
+    color: var(--primary-color) !important;
+    border: none;
+    font-weight: 700;
+}
+
+.service-feature-card .btn-hotel-book:hover {
+    background-color: var(--text-light) !important;
+    color: var(--primary-color) !important;
+}
+
+/* Hover expansion effect */
+.service-feature-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
 
 
