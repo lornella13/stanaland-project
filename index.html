@@ -26,15 +26,26 @@
             
             <!-- Navigation Section -->
             <nav>
-                <ul style="display: flex; list-style: none; margin: 0; padding: 0; gap: 25px; align-items: center;">
-                    <li><a href="index.html" style="text-decoration: none; color: #cc9933; font-weight: 500;">Home</a></li>
-                    <li><a href="services.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Services & Fleet</a></li>
-                    <li><a href="hotels.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Hotels</a></li>
-                    <li><a href="safaris.html" class="active" style="text-decoration: none; color:#ffffff; font-weight: 600;">Safaris</a></li> <!-- Highlighted Safaris link -->
-                    <li><a href="contact.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Contact Us</a></li>
-                </ul>
-            </nav>
-            
+    <!-- Hidden Checkbox Tracker (Triggers the menu toggle) -->
+    <input type="checkbox" id="menu-toggle" style="display: none;">
+    
+    <!-- Hamburger Icon Button Bars (Hidden on desktop, displays on mobile) -->
+    <label for="menu-toggle" class="hamburger-label">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <!-- Your exact original list container and links with your inline styles -->
+    <ul class="nav-menu" style="display: flex; list-style: none; margin: 0; padding: 0; gap: 25px; align-items: center;">
+        <li><a href="index.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Home</a></li>
+        <li><a href="services.html" class="active" style="text-decoration: none; color: #cc9933; font-weight: 600;">Services & Fleet</a></li>
+        <li><a href="hotels.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Hotels</a></li>
+        <li><a href="safaris.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Safaris</a></li>
+        <li><a href="contact.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Contact Us</a></li>
+    </ul>
+</nav>
+
         </div>
     </header>
 
