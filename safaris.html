@@ -12,30 +12,34 @@
 <body>
 
     <!-- Header Navigation -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <span class="logo-icon">S</span>
-                <div class="logo-text">
-                    <h1>STANALAND</h1>
-                    <span>TOUR AND TRAVEL</span>
-                </div>
+    <header style="background-color: #0d2c1d; width: 100%;">
+        <!-- Decreased top/bottom padding here to give the larger logo maximum room without making the whole bar too tall -->
+        <div class="container header-container" style="display: flex; justify-content: space-between; align-items: center; padding: 5px 40px; max-width: 1200px; margin: 0 auto; box-sizing: border-box;">
+            
+            <!-- Logo Section -->
+            <div class="logo" style="display: flex; align-items: center;">
+                <a href="index.html" style="display: block; line-height: 0;">
+                    <!-- Increased height to 115px so the text details are highly readable -->
+                    <img src="images/logo.png" alt="Stanaland Tour and Travel Logo" style="height: 115px; width: auto; display: block; object-fit: contain;">
+                </a>
             </div>
+            
+            <!-- Navigation Section -->
             <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services & Fleet</a></li>
-                    <li><a href="hotels.html">Hotels</a></li>
-                    <li><a href="safaris.html" class="active">Safaris</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="#" class="btn-nav">Book Online</a></li>
+                <ul style="display: flex; list-style: none; margin: 0; padding: 0; gap: 25px; align-items: center;">
+                    <li><a href="index.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Home</a></li>
+                    <li><a href="services.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Services & Fleet</a></li>
+                    <li><a href="hotels.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Hotels</a></li>
+                    <li><a href="safaris.html" class="active" style="text-decoration: none; color: #cc9933; font-weight: 600;">Safaris</a></li> <!-- Highlighted Safaris link -->
+                    <li><a href="contact.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Contact Us</a></li>
                 </ul>
             </nav>
+            
         </div>
     </header>
 
-    <!-- Page Title Sub-Hero Header -->
-    <section class="page-title-bar safari-hero-bg">
+    <!-- Page Title Sub-Hero Header (FIXED: Added padding-top to prevent header overlap) -->
+    <section class="page-title-bar safari-hero-bg" style="padding-top: 145px; padding-bottom: 40px; box-sizing: border-box;">
         <div class="container">
             <h2>Unforgettable East African Safaris</h2>
             <p class="page-subtitle">Cross-Border Expeditions Crafted Safely & Comfortably</p>
@@ -132,67 +136,27 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Card 6: Tree-Climbing Lions -->
+                 
+                 <!-- Card 6: Clouds Mountain Gorilla Lodge -->
                 <div class="safari-card">
-                    <img src="images/climbinglions.png" alt="Tree-Climbing Lions" class="safari-card-img">
+                    <img src="images/clouds.png" alt="Clouds Mountain Gorilla Lodge" class="safari-card-img">
                     <div class="safari-card-body">
-                        <div class="safari-card-meta">
-                            <span class="safari-tag">Ishasha Wilderness</span>
-                            <span class="safari-duration">3 Days</span>
+                         <div class="safari-card-meta">
+                             <span class="safari-tag">Bwindi Forest</span>
+                            <span class="safari-duration">PREMIUM ECO-LODGE</span>
+                         </div>
+                         <h3>Clouds Mountain Gorilla Lodge</h3>
+                         <p>Experience ultra-luxury nestled high in the clouds looking out at the majestic Virunga volcanoes. The perfect high-end base for an unforgettable premium primate tracking experience.</p>
+                         <div class="safari-card-action">
+                             <a href="contact.html" class="btn-hotel-book">Inquire Package</a>
                         </div>
-                        <h3>Ishasha Tree-Climbing Lions Safari</h3>
-                        <p>Track and photograph the rare, iconic lions resting lazily on old sycamore fig tree branches across southwestern Uganda's remote upcountry plains.</p>
-                        <div class="safari-card-action">
-                            <a href="contact.html" class="btn-hotel-book">Inquire Package</a>
-                        </div>
-                    </div>
+                   </div>
                 </div>
 
-                <!-- Card 7: Cultural Expeditions -->
-                <div class="safari-card">
-                    <img src="images/ibyiwacu.png" alt="Cultural Expeditions" class="safari-card-img">
-                    <div class="safari-card-body">
-                        <div class="safari-card-meta">
-                            <span class="safari-tag">Cultural Heritage</span>
-                            <span class="safari-duration">4 Days</span>
-                        </div>
-                        <h3>East African Cultural & Heritage Tour</h3>
-                        <p>Immerse your journey in authentic community heritage at the Iby’Iwacu Cultural Village in Rwanda or experience the traditional forest paths of the Batwa people.</p>
-                        <div class="safari-card-action">
-                            <a href="contact.html" class="btn-hotel-book">Inquire Package</a>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Card 8: Akagera Savannah Safari -->
-                <div class="safari-card">
-                    <img src="images/akagera.png" alt="Akagera Savannah Safari" class="safari-card-img">
-                    <div class="safari-card-body">
-                        <div class="safari-card-meta">
-                            <span class="safari-tag">Rwanda Big Five</span>
-                            <span class="safari-duration">4 Days</span>
-                        </div>
-                        <h3>Akagera National Park Savannah Drive</h3>
-                        <p>Embark on spectacular Big Five tracking game drives across the complex maze of wetland ecosystems, rolling hills, and open grasslands in Akagera, Rwanda.</p>
-                        <div class="safari-card-action">
-                            <a href="contact.html" class="btn-hotel-book">Inquire Package</a>
-                        </div>
-                    </div>
-                </div>
-                 <!-- Card 8: Lake Victoria -->
-                <div class="safari-card">
-                    <img src="images/victoria.png" alt="Akagera Savannah Safari" class="safari-card-img">
-                    <div class="safari-card-body">
-                        <div class="safari-card-meta">
-                            <span class="safari-tag">Uganda Big Five</span>
-                            <span class="safari-duration">4 Days</span>
-                        </div>
-                        <h3>Akagera National Park Savannah Drive</h3>
-                        <p> Africa’s largest tropical lake and the ultimate starting point for a Ugandan adventure. Spanning over 68,000 square kilometres, this massive freshwater inland sea feeds the Nile River and shapes Uganda’s vibrant south. It provides a peaceful, tropical escape just minutes from Entebbe International Airport.</p>
-                        <div class="safari-card-action">
-                            <a href="contact.html" class="btn-hotel-book">Inquire Package</a>
-                        </div>
-                    </div>
-                </div>
+            </div>
+        </div>
+    </section>
 
+</body>
+</html>

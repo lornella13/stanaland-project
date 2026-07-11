@@ -4,39 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Stanaland Tour and Travel</title>
+    
+    <!-- FIXED: Replaced the broken link with a functional Font Awesome v6 CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cloudflare.com">
 </head>
+
 <body>
 
-    <!-- Header Navigation -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <span class="logo-icon">S</span>
-                <div class="logo-text">
-                    <h1>STANALAND</h1>
-                    <span>TOUR AND TRAVEL</span>
-                </div>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services & Fleet</a></li>
-                    <li><a href="hotels.html">Hotels</a></li>
-                    <li><a href="safaris.html">Safaris</a></li>
-                    <li><a href="contact.html" class="active">Contact Us</a></li>
-                    <!-- <li><a href="#" class="btn-nav">Book Online</a></li> -->
-                </ul>
-            </nav>
+   <header style="background-color: #0d2c1d; width: 100%;">
+    <!-- Decreased top/bottom padding here to give the larger logo maximum room without making the whole bar too tall -->
+    <div class="container header-container" style="display: flex; justify-content: space-between; align-items: center; padding: 5px 40px; max-width: 1200px; margin: 0 auto; box-sizing: border-box;">
+        
+        <!-- Logo Section -->
+        <div class="logo" style="display: flex; align-items: center;">
+            <a href="index.html" style="display: block; line-height: 0;">
+                <!-- Increased height to 115px so the text details are highly readable -->
+                <img src="images/logo.png" alt="Stanaland Tour and Travel Logo" style="height: 115px; width: auto; display: block; object-fit: contain;">
+            </a>
         </div>
-    </header>
+        
+        <!-- Navigation Section -->
+        <nav>
+            <ul style="display: flex; list-style: none; margin: 0; padding: 0; gap: 25px; align-items: center;">
+                <li><a href="index.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Home</a></li>
+                <li><a href="services.html" class="active" style="text-decoration: none; color: #ffffff; font-weight: 600;">Services & Fleet</a></li>
+                <li><a href="hotels.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Hotels</a></li>
+                <li><a href="safaris.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Safaris</a></li>
+                <li><a href="contact.html" style="text-decoration: none; color: #cc9933; font-weight: 500;">Contact Us</a></li>
+            </ul>
+        </nav>
+        
+    </div>
+</header>
 
-    <!-- Page Title Sub-Hero Header -->
+    <!-- Sub-Hero Header Banner -->
     <section class="page-title-bar contact-hero-bg">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <p class="page-subtitle">We Are Ready to Take You There Safely, Comfortably, and On Time</p>
+        <div class="container hero-text-container">
+            <h2>Contact Us Today</h2>
+            <p class="page-subtitle">Let's Plan Your Unforgettable East African Journey Together</p>
         </div>
     </section>
 
@@ -44,42 +51,56 @@
     <section class="contact-section">
         <div class="container contact-grid-layout">
             
-            <!-- Left Column: Contact Cards -->
-            <div class="contact-info-panel">
-                <div class="info-card">
-                    <i class="fas fa-phone-alt"></i>
-                    <div>
-                        <h3>Direct Call Hotlines</h3>
-                        <p>+256 761 023 983</p>
-                        <p>+256 705 629 568</p>
-                    </div>
-                </div>
+            <!-- Left Column: Unified Contact Cards with Real Icons -->
+           <!-- Left Column: Unified Contact Cards with Real Icons -->
+<!-- Left Column: Unified Contact Cards with Real Icons -->
+<div class="contact-info-panel" style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px; width: 100%;">
+    
+    <!-- Card 1: Hotlines -->
+    <!-- FIXED: Added display: flex and align-items: center to layout the icon and text next to each other, left-aligned -->
+    <div class="info-card" style="display: flex; align-items: center; text-align: left; width: 100%; justify-content: flex-start; gap: 20px;">
+        <div class="icon-circle" style="flex-shrink: 0;">
+            <i class="fas fa-phone-alt"></i>
+        </div>
+        <div class="card-content" style="text-align: left;">
+            <h3 style="margin: 0 0 5px 0; text-align: left;">Direct Call Hotlines</h3>
+            <p style="margin: 0; text-align: left;">+256 761 023 983</p>
+            <p style="margin: 0; text-align: left;">+256 705 629 568</p>
+        </div>
+    </div>
 
-                <div class="info-card">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <h3>Email Communications</h3>
-                        <p>info@stanaland.ug</p>
-                        <p>bookings@stanaland.ug</p>
-                    </div>
-                </div>
+    <!-- Card 2: Emails -->
+    <div class="info-card" style="display: flex; align-items: center; text-align: left; width: 100%; justify-content: flex-start; gap: 20px;">
+        <div class="icon-circle" style="flex-shrink: 0;">
+            <i class="fas fa-envelope"></i>
+        </div>
+        <div class="card-content" style="text-align: left;">
+            <h3 style="margin: 0 0 5px 0; text-align: left;">Email Communications</h3>
+            <p style="margin: 0; text-align: left;">info@stanaland.ug</p>
+            <p style="margin: 0; text-align: left;">bookings@stanaland.ug</p>
+        </div>
+    </div>
 
-                <div class="info-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <h3>Main Office Hub</h3>
-                        <p>Kampala, Uganda</p>
-                        <p>Cross-Border Transit Ops: Uganda & Rwanda</p>
-                    </div>
-                </div>
-            </div>
+    <!-- Card 3: Location -->
+    <div class="info-card" style="display: flex; align-items: center; text-align: left; width: 100%; justify-content: flex-start; gap: 20px;">
+        <div class="icon-circle" style="flex-shrink: 0;">
+            <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <div class="card-content" style="text-align: left;">
+            <h3 style="margin: 0 0 5px 0; text-align: left;">Main Office Hub</h3>
+            <p style="margin: 0; text-align: left;">Kampala, Uganda</p>
+            <p style="margin: 0; text-align: left;">Cross-Border Transit Ops: Uganda & Rwanda</p>
+        </div>
+    </div>
+
+</div>
+
 
             <!-- Right Column: Interactive Booking Form -->
             <div class="contact-form-panel">
                 <h3>Send Us an Enquiry</h3>
                 <p>Fill out your details below to route an automated booking query to our desk.</p>
                 
-                <!-- ID Verified for script connection -->
                 <form id="contactPageForm">
                     <div class="form-group">
                         <label for="contactName">Full Name</label>
@@ -121,7 +142,6 @@
         </div>
     </footer>
 
-    <!-- Essential connection line matching script naming explicitly -->
     <script src="script.js"></script>
 </body>
 </html>

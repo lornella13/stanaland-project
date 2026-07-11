@@ -8,6 +8,7 @@
     --text-dark: #1f2937;
     --text-light: #ffffff;
     --bg-light: #f9fafb;
+    justify-content: space-between;
 }
 
 * {
@@ -16,6 +17,7 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     scroll-behavior: smooth;
+    justify-content: space-between;
 }
 
 /* Flex layout allows footers to sit cleanly at the bottom */
@@ -90,6 +92,7 @@ nav ul {
     list-style: none;
     align-items: center;
     gap: 25px;
+    
 }
 
 nav ul li a {
@@ -98,6 +101,7 @@ nav ul li a {
     font-size: 14px;
     font-weight: 500;
     transition: color 0.3s ease;
+    justify-content: space-between;
 }
 
 nav ul li a:hover, nav ul li a.active {
@@ -513,7 +517,7 @@ footer {
 
 .rwanda-split {
     background: linear-gradient(rgba(204, 164, 59, 0.75), rgba(6, 52, 29, 0.85)), url('images/rwanda-split.jpg') no-repeat center center/cover;
-    background-color: #1a422b;
+    background-color: #285f40;
     border-left: 2px solid rgba(255,255,255,0.1);
 }
 
@@ -691,129 +695,238 @@ footer {
 .btn-safari:hover {
     background-color: var(--accent-color);
     color: var(--primary-color);
-}
-/* ==========================================
-   10. CONTACT PAGE EXTENSION
+}/* ==========================================
+   Header and Gold Circle Logo
    ========================================== */
-.contact-hero-bg {
-    background: linear-gradient(rgba(6,52,29,0.85), rgba(6,52,29,0.9)), url('images/contact-hero.jpg') no-repeat center center/cover;
+.main-header {
+    background-color: #0d2c1d;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-.contact-section {
-    padding: 80px 0;
-    background-color: var(--bg-light);
-    flex: 1 0 auto;
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px 10px 20px;
     width: 100%;
+    max-width: 100% !important;
+    box-sizing: border-box;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.logo-circle {
+    width: 120px;
+    height: 120px;
+    border: 3px solid #cc9933;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(204, 153, 51, 0.05);
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 15px;
+}
+
+.logo-circle img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.nav-menu a.active {
+    color: #cc9933;
+    font-weight: 600;
+}
+
+/* ==========================================
+   Hero Banner Area
+   ========================================== */
+.page-title-bar {
+    padding-top: 170px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+}
+
+.hero-text-container {
+    text-align: center;
+}
+
+.page-subtitle {
+    color: #cca43b;
+    margin-top: 8px;
+}
+
+/* ==========================================
+   Perfectly Aligned Contact Info Cards
+   ========================================== */
+.contact-section {
+    padding: 40px 0;
+    background-color: #f9f9f9;
 }
 
 .contact-grid-layout {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    display: flex;
     gap: 40px;
-    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .contact-info-panel {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 45%;
+    text-align: left;
+    justify-content: flex-start;
 }
 
 .info-card {
-    background: #ffffff;
-    padding: 25px;
-    border-radius: 6px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-    border-left: 4px solid var(--accent-color);
     display: flex;
-    align-items: flex-start;
-    gap: 20px;
+    align-items: center;
+    background-color: #ffffff;
+    border-left: 5px solid #cc9933; /* Keeps left lines perfectly parallel */
+    border-radius: 4px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    min-height: 130px;
+    box-sizing: border-box;
+    width: 100%;
+    
 }
 
-.info-card i {
-    font-size: 24px;
-    color: var(--primary-color);
-    background: #f0f4f1;
-    padding: 15px;
+.icon-circle {
+    width: 46px;
+    height: 46px;
+    background-color: rgba(13, 44, 29, 0.08); /* Transparent matching green */
     border-radius: 50%;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
-.info-card h3 {
-    color: var(--primary-color);
+.icon-circle i {
+    color: #0d2c1d; /* Deep green icon tint */
     font-size: 18px;
-    margin-bottom: 6px;
 }
 
-.info-card p {
+.card-content h3 {
+    margin: 0 0 6px 0;
+    font-size: 17px;
+    color: #0d2c1d;
+    font-weight: 700;
+    text-align: left;
+    
+}
+
+.card-content p {
+    margin: 0;
+    font-size: 14.5px;
     color: #555555;
-    font-size: 15px;
     line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-start;
 }
 
+/* ==========================================
+   Right Panel: Form Layout
+   ========================================== */
 .contact-form-panel {
-    background: #ffffff;
-    padding: 40px;
+    width: 55%;
+    background-color: #ffffff;
+    padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    border-top: 4px solid var(--primary-color);
-}
-
-.contact-form-panel h3 {
-    color: var(--primary-color);
-    font-size: 24px;
-    margin-bottom: 8px;
-}
-
-.contact-form-panel p {
-    color: #666666;
-    font-size: 14px;
-    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-sizing: border-box;
 }
 
 .form-group {
     margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
 }
 
 .form-group label {
-    font-size: 14px;
+    display: block;
+    margin-bottom: 8px;
     font-weight: 600;
-    color: var(--primary-color);
+    color: #0d2c1d;
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid #cbd5e1;
+    border: 1px solid #dddddd;
     border-radius: 4px;
-    outline: none;
-    font-size: 14px;
-    color: var(--text-dark);
-    transition: border 0.3s;
-}
-
-.form-group input:focus, .form-group textarea:focus {
-    border-color: var(--primary-color);
+    box-sizing: border-box;
 }
 
 .btn-submit-contact {
     width: 100%;
-    background-color: var(--primary-color);
-    color: var(--text-light);
+    background-color: #0d2c1d;
+    color: #ffffff;
     border: none;
     padding: 14px;
-    font-weight: bold;
     font-size: 16px;
-    cursor: pointer;
+    font-weight: 600;
     border-radius: 4px;
-    transition: background 0.3s;
+    cursor: pointer;
 }
 
-.btn-submit-contact:hover {
-    background-color: var(--accent-color);
-    color: var(--primary-color);
+/* ==========================================
+   Footer
+   ========================================== */
+footer {
+    background-color: #0d2c1d;
+    color: #ffffff;
+    padding: 40px 0 20px 0;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
 }
 
 /* ==========================================

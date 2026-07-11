@@ -12,27 +12,33 @@
 <body>
 
     <!-- Global Navigation Header -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <span class="logo-icon">S</span>
-                <div class="logo-text">
-                    <h1>STANALAND</h1>
-                    <span>TOUR AND TRAVEL</span>
-                </div>
+ <header style="background-color: #0d2c1d; width: 100%;">
+        <!-- Decreased top/bottom padding here to give the larger logo maximum room without making the whole bar too tall -->
+        <div class="container header-container" style="display: flex; justify-content: space-between; align-items: center; padding: 5px 40px; max-width: 1200px; margin: 0 auto; box-sizing: border-box;">
+            
+            <!-- Logo Section -->
+            <div class="logo" style="display: flex; align-items: center;">
+                <a href="index.html" style="display: block; line-height: 0;">
+                    <!-- Increased height to 115px so the text details are highly readable -->
+                    <img src="images/logo.png" alt="Stanaland Tour and Travel Logo" style="height: 115px; width: auto; display: block; object-fit: contain;">
+                </a>
             </div>
+            
+            <!-- Navigation Section -->
             <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="services.html">Services & Fleet</a></li>
-                    <li><a href="hotels.html">Hotels</a></li>
-                    <li><a href="safaris.html">Safaris</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <!-- <li><a href="#" class="btn-nav">Book Online</a></li> -->
+                <ul style="display: flex; list-style: none; margin: 0; padding: 0; gap: 25px; align-items: center;">
+                    <li><a href="index.html" style="text-decoration: none; color: #cc9933; font-weight: 500;">Home</a></li>
+                    <li><a href="services.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Services & Fleet</a></li>
+                    <li><a href="hotels.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Hotels</a></li>
+                    <li><a href="safaris.html" class="active" style="text-decoration: none; color:#ffffff; font-weight: 600;">Safaris</a></li> <!-- Highlighted Safaris link -->
+                    <li><a href="contact.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Contact Us</a></li>
                 </ul>
             </nav>
+            
         </div>
     </header>
+
+
 
     <!-- Updated Hero Section containing the Sliding Layout Structure -->
     <section class="hero">

@@ -3,39 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services & Premium Fleet | Stanaland Tour and Travel</title>
-    <!-- Core global layout connection -->
+    <title>Contact Us | Stanaland Tour and Travel</title>
+    
+    <!-- FIXED: Replaced the broken link with a functional Font Awesome v6 CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css">
-    <!-- Production FontAwesome Kit Connection for clean vector icons -->
-    <link rel="stylesheet" href="https://cloudflare.com">
 </head>
+
 <body>
 
     <!-- Header Navigation Bar -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <span class="logo-icon">S</span>
-                <div class="logo-text">
-                    <h1>STANALAND</h1>
-                    <span>TOUR AND TRAVEL</span>
-                </div>
+    <header style="background-color: #0d2c1d; width: 100%;">
+        <!-- Decreased top/bottom padding here to give the larger logo maximum room without making the whole bar too tall -->
+        <div class="container header-container" style="display: flex; justify-content: space-between; align-items: center; padding: 5px 40px; max-width: 1200px; margin: 0 auto; box-sizing: border-box;">
+            
+            <!-- Logo Section -->
+            <div class="logo" style="display: flex; align-items: center;">
+                <a href="index.html" style="display: block; line-height: 0;">
+                    <!-- Increased height to 115px so the text details are highly readable -->
+                    <img src="images/logo.png" alt="Stanaland Tour and Travel Logo" style="height: 115px; width: auto; display: block; object-fit: contain;">
+                </a>
             </div>
+            
+            <!-- Navigation Section -->
             <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html" class="active">Services & Fleet</a></li>
-                    <li><a href="hotels.html">Hotels</a></li>
-                    <li><a href="safaris.html">Safaris</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <!-- <li><a href="#" class="btn-nav">Book Online</a></li> -->
+                <ul style="display: flex; list-style: none; margin: 0; padding: 0; gap: 25px; align-items: center;">
+                    <li><a href="index.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Home</a></li>
+                    <li><a href="services.html" class="active" style="text-decoration: none; color: #cc9933; font-weight: 600;">Services & Fleet</a></li>
+                    <li><a href="hotels.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Hotels</a></li>
+                    <li><a href="safaris.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Safaris</a></li>
+                    <li><a href="contact.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Contact Us</a></li>
                 </ul>
             </nav>
+            
         </div>
     </header>
 
-    <!-- Sub-Hero Title Header -->
-    <section class="page-title-bar services-hero-bg">
+    <!-- Sub-Hero Title Header (FIXED: Added padding-top to prevent header overlap) -->
+    <section class="page-title-bar services-hero-bg" style="padding-top: 145px; padding-bottom: 40px; box-sizing: border-box;">
         <div class="container">
             <h2>Our Core Services & Fleet</h2>
             <p class="page-subtitle">Safely, Comfortably, On Time — Tailored Transport Solutions</p>
@@ -129,6 +135,7 @@
     </section>
 
     <!-- Vehicle Car Hire Showcase Panel -->
+       <!-- Vehicle Car Hire Showcase Panel -->
     <section class="fleet-showcase-panel">
         <div class="container">
             
@@ -137,55 +144,31 @@
                 <div class="header-divider-line"></div>
             </div>
 
-            <div class="fleet-cards-grid">
+            <!-- This grid layout will automatically place them side-by-side cleanly -->
+            <div class="fleet-cards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 35px;">
                 
-                <!-- Vehicle Card 1: Land Cruiser (Fixed Extension) -->
+                <!-- Vehicle Card 1: Land Cruiser -->
                 <div class="fleet-vehicle-card">
                     <img src="images/car.png" alt="4x4 Safari Land Cruiser" class="fleet-card-img">
                     <div class="fleet-card-body">
                         <h3>4x4 Luxury Safari Land Cruiser</h3>
-                        <p>The ultimate rugged off-roader. Equipped with a custom pop-up roof for wildlife viewing, electronic charging ports, refrigeration box, and heavy-duty suspension tailored for comfortable upcountry safaris.</p>
-                        <div class="fleet-card-action">
-                            <a href="contact.html" class="btn-hotel-book">Hire This Vehicle</a>
-                        </div>
+                        <p>The ultimate rugged off-roader. Equipped with a custom pop-up roof for wildlife viewing, electronic charging ports, refrigeration box,</p>
                     </div>
                 </div>
 
-                <!-- Vehicle Card 2: Super Custom Safari Van (Fixed Extension) -->
+                <!-- Vehicle Card 2: Safari Van / Minivan (Restored to fix layout width) -->
                 <div class="fleet-vehicle-card">
-                    <img src="images/safaricar.png" alt="Premium Super Custom Safari Van" class="fleet-card-img">
+                    <img src="images/cruiser.png" alt="4x4 Safari Minivan" class="fleet-card-img">
                     <div class="fleet-card-body">
-                        <h3>Premium Super Custom Safari Van</h3>
-                        <p>Spacious, fully air-conditioned group travel van featuring comfortable adjustable passenger seats. Perfect for family tours, corporate group transfers, and long-distance cross-border journeys between Uganda and Rwanda.</p>
-                        <div class="fleet-card-action">
-                            <a href="contact.html" class="btn-hotel-book">Hire This Vehicle</a>
-                        </div>
+                        <h3>4x4 Customized Safari Van</h3>
+                        <p>Perfect for mid-sized family groups. Offers spacious high-back seating, large window viewing panes, air conditioning, and top cargo racks,</p>
                     </div>
                 </div>
+                
+            </div> <!-- Closes .fleet-cards-grid -->
+        </div> <!-- Closes .container -->
+    </section> <!-- Closes .fleet-showcase-panel -->
 
-            </div>
-        </div>
-    </section>
 
-    <!-- Global Footer -->
-    <footer>
-        <div class="container footer-container">
-            <div class="footer-brand">
-                <h3>We take you there</h3>
-                <p class="motto">SAFELY, COMFORTABLY, ON TIME.</p>
-            </div>
-            <div class="footer-contact">
-                <h4>Direct Hotlines</h4>
-                <p><i class="fas fa-phone-alt"></i> +256 761 023 983</p>
-                <p><i class="fas fa-phone-alt"></i> +256 705 629 568</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Stanaland Tour and Travel. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Global scripts connection -->
-    <script src="script.js"></script>
 </body>
 </html>

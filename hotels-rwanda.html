@@ -10,36 +10,41 @@
 </head>
 <body>
 
-    <!-- Header Navigation -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <span class="logo-icon">S</span>
-                <div class="logo-text">
-                    <h1>STANALAND</h1>
-                    <span>TOUR AND TRAVEL</span>
-                </div>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services & Fleet</a></li>
-                    <li><a href="hotels.html" class="active">Hotels</a></li>
-                    <li><a href="safaris.html">Safaris</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <!-- <li><a href="#" class="btn-nav">Book Online</a></li> -->
-                </ul>
-            </nav>
+<!-- Header Navigation (FIXED: Locked position at top of viewport screen) -->
+<!-- Header Navigation (FIXED: Color updated to match the dark title background exactly) -->
+<header style="background-color: #0d2c1d; width: 100%; position: fixed; top: 0; left: 0; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+    <!-- Decreased top/bottom padding here to give the larger logo maximum room without making the whole bar too tall -->
+    <div class="container header-container" style="display: flex; justify-content: space-between; align-items: center; padding: 5px 40px; max-width: 1200px; margin: 0 auto; box-sizing: border-box;">
+        
+        <!-- Logo Section -->
+        <div class="logo" style="display: flex; align-items: center;">
+            <a href="index.html" style="display: block; line-height: 0;">
+                <!-- Increased height to 115px so the text details are highly readable -->
+                <img src="images/logo.png" alt="Stanaland Tour and Travel Logo" style="height: 115px; width: auto; display: block; object-fit: contain;">
+            </a>
         </div>
-    </header>
+        
+        <!-- Navigation Section -->
+        <nav>
+            <ul style="display: flex; list-style: none; margin: 0; padding: 0; gap: 25px; align-items: center;">
+                <li><a href="index.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Home</a></li>
+                <li><a href="services.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Services & Fleet</a></li>
+                <li><a href="hotels.html" class="active" style="text-decoration: none; color: #cc9933; font-weight: 600;">Hotels</a></li>
+                <li><a href="safaris.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Safaris</a></li>
+                <li><a href="contact.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Contact Us</a></li>
+            </ul>
+        </nav>
+        
+    </div>
+</header>
 
-    <!-- Sub-Hero Page Header -->
-    <section class="page-title-bar rwanda-hotels-hero-bg">
-        <div class="container">
-            <h2>Top Premium Hotels in Rwanda</h2>
-            <p class="page-subtitle">Luxury & Eco-Lodges Handpicked Across Kigali and Volcano National Parks</p>
-        </div>
-    </section>
+<!-- Page Title Sub-Hero Header Banner -->
+<section class="page-title-bar uganda-hotels-hero-bg" style="background-color: #3d7d58; padding-top: 155px; padding-bottom: 40px; box-sizing: border-box;">
+    <div class="container" style="text-align: center;">
+        <h2>Premium Hotels & Safari Lodges in Rwanda</h2>
+        <p class="page-subtitle" style="color: #cca43b; margin-top: 8px;">Handpicked Luxury & Comfort Across the Heart of Africa</p>
+    </div>
+</section>
 
     <!-- Rwanda Hotels Grid -->
     <section class="hotels-display">

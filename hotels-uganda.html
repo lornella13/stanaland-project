@@ -1,192 +1,492 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top Hotels & Safari Lodges in Uganda | Stanaland Tour and Travel</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Top Hotels & Safari Lodges in Uganda | Stanaland Tour and Travel
+    </title>
     <!-- Core layout connection -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="">
-</head>
-<body>
-
-    <!-- Header Navigation Bar -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <span class="logo-icon">S</span>
-                <div class="logo-text">
-                    <h1>STANALAND</h1>
-                    <span>TOUR AND TRAVEL</span>
-                </div>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html">Services & Fleet</a></li>
-                    <li><a href="hotels.html" class="active">Hotels</a></li>
-                    <li><a href="safaris.html">Safaris</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <!-- <li><a href="#" class="btn-nav">Book Online</a></li> -->
-                </ul>
-            </nav>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+   <!-- Header Navigation (FIXED: Color updated to match the dark title background exactly) -->
+<header style="background-color: #0d2c1d; width: 100%; position: fixed; top: 0; left: 0; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+    <!-- Decreased top/bottom padding here to give the larger logo maximum room without making the whole bar too tall -->
+    <div class="container header-container" style="display: flex; justify-content: space-between; align-items: center; padding: 5px 40px; max-width: 1200px; margin: 0 auto; box-sizing: border-box;">
+        
+        <!-- Logo Section -->
+        <div class="logo" style="display: flex; align-items: center;">
+            <a href="index.html" style="display: block; line-height: 0;">
+                <!-- Increased height to 115px so the text details are highly readable -->
+                <img src="images/logo.png" alt="Stanaland Tour and Travel Logo" style="height: 115px; width: auto; display: block; object-fit: contain;">
+            </a>
         </div>
-    </header>
-
-    <!-- Sub-Hero Page Header Banner -->
-    <section class="page-title-bar uganda-hotels-hero-bg">
-        <div class="container">
-            <h2>Premium Hotels & Safari Lodges in Uganda</h2>
-            <p class="page-subtitle">Handpicked Luxury & Comfort Across the Pearl of Africa</p>
-        </div>
+        
+        <!-- Navigation Section -->
+        <nav>
+            <ul style="display: flex; list-style: none; margin: 0; padding: 0; gap: 25px; align-items: center;">
+                <li><a href="index.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Home</a></li>
+                <li><a href="services.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Services & Fleet</a></li>
+                <li><a href="hotels.html" class="active" style="text-decoration: none; color: #cc9933; font-weight: 600;">Hotels</a></li>
+                <li><a href="safaris.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Safaris</a></li>
+                <li><a href="contact.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Contact Us</a></li>
+            </ul>
+        </nav>
+        
+    </div>
+</header>
+    <!-- Sub-Hero Page Header Banner (FIXED: Added padding-top to prevent header overlap) -->
+    <section
+      class="page-title-bar uganda-hotels-hero-bg"
+      style="padding-top: 145px; padding-bottom: 40px; box-sizing: border-box"
+    >
+      <div class="container">
+        <h2>Premium Hotels & Safari Lodges in Uganda</h2>
+        <p class="page-subtitle">
+          Handpicked Luxury & Comfort Across the Pearl of Africa
+        </p>
+      </div>
     </section>
 
     <!-- Uganda Hotels Grid Display Area -->
     <section class="hotels-display">
-        <div class="container">
-            <div class="hotel-grid-layout">
-                
-                <!-- Card 1: Kampala Serena Hotel -->
-                <div class="hotel-card">
-                    <img src="images/ukampala.png" alt="Kampala Serena Hotel" class="hotel-card-img">
-                    <div class="hotel-card-body">
-                        <div class="hotel-card-meta">
-                            <span class="hotel-location"><i class="fas fa-map-marker-alt"></i> Kampala City</span>
-                            <span class="hotel-rating">5-Star Luxury</span>
-                        </div>
-                        <h3>Kampala Serena Hotel</h3>
-                        <p>An oasis of serene green spaces right in the center of the capital. Offers world-class fine dining, luxury wellness spas, excellent security, and elegant rooms tailored for executive business travelers and city visitors alike.</p>
-                        <div class="hotel-card-action">
-                            <a href="contact.html" class="btn-hotel-book">Book a Ride</a>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <!-- FIXED ROW LAYOUT: Added inline grid properties to force 3 items per row layout row -->
+        <div
+          class="hotel-grid-layout"
+          style="
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+            box-sizing: border-box;
+          "
+        >
+          <!-- Card 1: Kampala Serena Hotel -->
+          <div class="hotel-card">
+            <img
+              src="images/ukampala.png"
+              alt="Kampala Serena Hotel"
+              class="hotel-card-img"
+            />
+            <div class="hotel-card-body">
+              <div class="hotel-card-meta">
+                <span class="hotel-location"
+                  ><i class="fas fa-map-marker-alt"></i> Kampala City</span
+                >
+                <span class="hotel-rating">5-Star Luxury</span>
+              </div>
+              <h3>Kampala Serena Hotel</h3>
+              <p>
+                An oasis of serene green spaces right in the center of the
+                capital. Offers world-class fine dining, luxury wellness spas,
+                excellent security, and elegant rooms tailored for executive
+                business travelers and city visitors alike.
+              </p>
+              <div class="hotel-card-action">
+                <a href="contact.html" class="btn-hotel-book">Book a Ride</a>
+              </div>
+            </div>
+          </div>
 
-                <!-- Card 2: Chobe Safari Lodge -->
-                <div class="hotel-card">
-                    <img src="images/uhotel.png" alt="Chobe Safari Lodge" class="hotel-card-img">
-                    <div class="hotel-card-body">
-                        <div class="hotel-card-meta">
-                            <span class="hotel-location"><i class="fas fa-map-marker-alt"></i> Murchison Falls</span>
-                            <span class="hotel-rating">Luxury Wildlife</span>
-                        </div>
-                        <h3>Chobe Safari Lodge</h3>
-                        <p>Located inside Murchison Falls National Park, this premium lodge offers breathtaking, panoramic views of the River Nile. Enjoy the roar of the rapids, an outdoor multi-tiered swimming pool, and exceptional wildlife tracking trails.</p>
-                        <div class="hotel-card-action">
-                            <a href="contact.html" class="btn-hotel-book">Book a Ride</a>
-                        </div>
-                    </div>
-                </div>
+          <!-- Card 2: Chobe Safari Lodge -->
+          <div class="hotel-card">
+            <img
+              src="images/uhotel.png"
+              alt="Chobe Safari Lodge"
+              class="hotel-card-img"
+            />
+            <div class="hotel-card-body">
+              <div class="hotel-card-meta">
+                <span class="hotel-location"
+                  ><i class="fas fa-map-marker-alt"></i> Murchison Falls</span
+                >
+                <span class="hotel-rating">Luxury Wildlife</span>
+              </div>
+              <h3>Chobe Safari Lodge</h3>
+              <p>
+                Located inside Murchison Falls National Park, this premium lodge
+                offers breathtaking, panoramic views of the River Nile. Enjoy
+                the roar of the rapids, an outdoor multi-tiered swimming pool,
+                and exceptional wildlife tracking trails.
+              </p>
+              <div class="hotel-card-action">
+                <a href="contact.html" class="btn-hotel-book">Book a Ride</a>
+              </div>
+            </div>
+          </div>
 
-                <!-- Card 3: Latitude 0 Degrees -->
-                <div class="hotel-card">
-                    <img src="images/latitude.png" alt="Latitude 0 Degrees Kampala" class="hotel-card-img">
-                    <div class="hotel-card-body">
-                        <div class="hotel-card-meta">
-                            <span class="hotel-location"><i class="fas fa-map-marker-alt"></i> Makindye, Kampala</span>
-                            <span class="hotel-rating">Boutique Design</span>
-                        </div>
-                        <h3>Latitude 0° Kampala</h3>
-                        <p>Perched high on Makindye Hill, this trendy boutique hotel blends quirky luxury designs, custom local African artwork, exceptional culinary experiences, and an incredible rooftop lounge overlooking the city skyline.</p>
-                        <div class="hotel-card-action">
-                            <a href="contact.html" class="btn-hotel-book">Book a Ride</a>
-                        </div>
-                    </div>
-                </div>
+          <!-- Card 3: Latitude 0 Degrees -->
+          <div class="hotel-card">
+            <img
+              src="images/latitude.png"
+              alt="Latitude 0 Degrees Kampala"
+              class="hotel-card-img"
+            />
+            <div class="hotel-card-body">
+              <div class="hotel-card-meta">
+                <span class="hotel-location"
+                  ><i class="fas fa-map-marker-alt"></i> Makindye, Kampala</span
+                >
+                <span class="hotel-rating">Boutique Design</span>
+              </div>
+              <h3>Latitude 0° Kampala</h3>
+              <p>
+                Perched high on Makindye Hill, this trendy boutique hotel blends
+                quirky luxury designs, custom local African artwork, exceptional
+                culinary experiences, and an incredible rooftop lounge
+                overlooking the city skyline.
+              </p>
+              <div class="hotel-card-action">
+                <a href="contact.html" class="btn-hotel-book">Book a Ride</a>
+              </div>
+            </div>
+          </div>
 
-                <!-- Card 4: Paraa Safari Lodge -->
-                <div class="hotel-card">
-                    <img src="images/para.png" alt="Paraa Safari Lodge" class="hotel-card-img">
-                    <div class="hotel-card-body">
-                        <div class="hotel-card-meta">
-                            <span class="hotel-location"><i class="fas fa-map-marker-alt"></i> Murchison Falls</span>
-                            <span class="hotel-rating">Classic Safari</span>
-                        </div>
-                        <h3>Paraa Safari Lodge</h3>
-                        <p>Evoking the timeless charm of historic explorers' camps, Paraa offers elevated luxury comfort right along the banks of the dramatic River Nile. It provides an ideal base for game drives and launch trips to the falls.</p>
-                        <div class="hotel-card-action">
-                            <a href="contact.html" class="btn-hotel-book">Book a Ride</a>
-                        </div>
-                    </div>
-                </div>
+          <!-- Card 4: Paraa Safari Lodge -->
+          <div class="hotel-card">
+            <img
+              src="images/para.png"
+              alt="Paraa Safari Lodge"
+              class="hotel-card-img"
+            />
+            <div class="hotel-card-body">
+              <div class="hotel-card-meta">
+                <span class="hotel-location"
+                  ><i class="fas fa-map-marker-alt"></i> Murchison Falls</span
+                >
+                <span class="hotel-rating">Classic Safari</span>
+              </div>
+              <h3>Paraa Safari Lodge</h3>
+              <p>
+                Evoking the timeless charm of historic explorers' camps, Paraa
+                offers elevated luxury comfort right along the banks of the
+                dramatic River Nile. It provides an ideal base for game drives
+                and launch trips to the falls.
+              </p>
+              <div class="hotel-card-action">
+                <a href="contact.html" class="btn-hotel-book">Book a Ride</a>
+              </div>
+            </div>
+          </div>
 
-                <!-- Card 5: Clouds Mountain Gorilla Lodge -->
-                <div class="hotel-card">
-                    <img src="images/clouds.png" alt="Clouds Mountain Gorilla Lodge" class="hotel-card-img">
-                    <div class="hotel-card-body">
-                        <div class="hotel-card-meta">
-                            <span class="hotel-location"><i class="fas fa-map-marker-alt"></i> Bwindi Forest</span>
-                            <span class="hotel-rating">Premium Eco Lodge</span>
-                        </div>
-                        <h3>Clouds Mountain Gorilla Lodge</h3>
-                        <p>Uganda’s highest lodge. Rest up in gorgeous volcanic stone cottages right on the boundary ridge of Bwindi Impenetrable Forest, offering a cozy private fireplace and quick access to gorilla tracking paths.</p>
-                        <div class="hotel-card-action">
-                            <a href="contact.html" class="btn-hotel-book">Book a Ride</a>
-                        </div>
-                    </div>
-                </div>
+          <!-- Card 5: Clouds Mountain Gorilla Lodge -->
+          <div class="hotel-card">
+            <img
+              src="images/clouds.png"
+              alt="Clouds Mountain Gorilla Lodge"
+              class="hotel-card-img"
+            />
+            <div class="hotel-card-body">
+              <div class="hotel-card-meta">
+                <span class="hotel-location"
+                  ><i class="fas fa-map-marker-alt"></i> Bwindi Forest</span
+                >
+                <span class="hotel-rating">Premium Eco Lodge</span>
+              </div>
+              <h3>Clouds Mountain Gorilla Lodge</h3>
+              <p>
+                Uganda’s highest lodge. Rest up in gorgeous volcanic stone
+                cottages right on the boundary ridge of Bwindi Impenetrable
+                Forest, offering a cozy private fireplace and quick access to
+                gorilla tracking paths.
+              </p>
+              <div class="hotel-card-action">
+                <a href="contact.html" class="btn-hotel-book">Book a Ride</a>
+              </div>
+            </div>
+          </div>
 
-                <!-- Card 6: Mweya Safari Lodge -->
-                <div class="hotel-card">
-                    <img src="images/mweya.png" alt="Mweya Safari Lodge" class="hotel-card-img">
-                    <div class="hotel-card-body">
-                        <div class="hotel-card-meta">
-                            <span class="hotel-location"><i class="fas fa-map-marker-alt"></i> Queen Elizabeth Park</span>
-                            <span class="hotel-rating">Wildlife Hub</span>
-                        </div>
-                        <h3>Mweya Safari Lodge</h3>
-                        <p>Located on a scenic peninsula overlooking the iconic Kazinga Channel. Offers an unforgettable front-row seat to wild elephants, buffaloes, and hippos cooling off along the water shores right from your balcony.</p>
-                        <div class="hotel-card-action">
-                            <a href="contact.html" class="btn-hotel-book">Book a Ride</a>
-                        </div>
-                    </div>
-                </div>
+          <!-- Card 6: Mweya Safari Lodge (FIXED: Restored string closure errors) -->
+          <div class="hotel-card">
+            <img
+              src="images/mweya.png"
+              alt="Mweya Safari Lodge"
+              class="hotel-card-img"
+            />
+            <div class="hotel-card-body">
+              <div class="hotel-card-meta">
+                <span class="hotel-location"
+                  ><i class="fas fa-map-marker-alt"></i> Queen Elizabeth
+                  National Park</span
+                >
+                <span class="hotel-rating">Savannah Luxury</span>
+              </div>
+              <h3>Mweya Safari Lodge</h3>
+              <p>
+                Located on a commanding peninsula right in the heart of Queen
+                Elizabeth National Park, Mweya provides spectacular views over
+                the Kazinga Channel. Watch wildlife graze right from your
+                private veranda or the outdoor infinity pool deck area.
+              </p>
+              <div class="hotel-card-action">
+                <a href="contact.html" class="btn-hotel-book">Book a Ride</a>
+              </div>
+            </div>
+          </div>
 
-                <!-- Card 7: Protea Hotel Entebbe -->
-                <div class="hotel-card">
-                    <img src="images/protea.png" alt="Protea Hotel Entebbe" class="hotel-card-img">
-                    <div class="hotel-card-body">
-                        <div class="hotel-card-meta">
-                            <span class="hotel-location"><i class="fas fa-map-marker-alt"></i> Entebbe Sands</span>
-                            <span class="hotel-rating">Lakeside Luxury</span>
-                        </div>
-                        <h3>Protea Hotel Entebbe</h3>
-                        <p>A sleek, premium resort directly located on the white sand shores of Lake Victoria. Offers luxury flight transit rooms, fine lakeside terrace dining, and is just minutes away from Entebbe International Airport.</p>
-                        <div class="hotel-card-action">
-                            <a href="contact.html" class="btn-hotel-book">Book a Ride</a>
-                        </div>
-                    </div>
+          <!-- Card 7: Protea Hotel Entebbe -->
+          <div
+            class="hotel-card"
+            style="
+              background: #ffffff;
+              border: 1px solid #e0e0e0;
+              border-radius: 8px;
+              overflow: hidden;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              height: 100%;
+              box-sizing: border-box;
+            "
+          >
+            <div>
+              <img
+                src="images/protea.png"
+                alt="Protea Hotel Entebbe"
+                class="hotel-card-img"
+                style="
+                  width: 100%;
+                  height: 220px;
+                  object-fit: cover;
+                  display: block;
+                "
+              />
+              <div class="hotel-card-body" style="padding: 20px">
+                <div
+                  class="hotel-card-meta"
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 12px;
+                    font-size: 13px;
+                  "
+                >
+                  <span class="hotel-location" style="color: #666666"
+                    ><i class="fas fa-map-marker-alt"></i> Entebbe Sands</span
+                  >
+                  <span
+                    class="hotel-rating"
+                    style="color: #cc9933; font-weight: 600"
+                    >Lakeside Luxury</span
+                  >
                 </div>
+                <h3
+                  style="
+                    color: #0d2c1d;
+                    margin: 0 0 10px 0;
+                    font-size: 20px;
+                    font-weight: 600;
+                  "
+                >
+                  Protea Hotel Entebbe
+                </h3>
+                <p
+                  style="
+                    color: #555555;
+                    font-size: 14px;
+                    line-height: 1.6;
+                    margin: 0;
+                  "
+                >
+                  A sleek, premium resort directly located on the white sand
+                  shores of Lake Victoria. Offers luxury flight transit rooms,
+                  fine lakeside terrace dining, and is just minutes away from
+                  Entebbe International Airport.
+                </p>
+              </div>
+            </div>
+            <div class="hotel-card-action" style="padding: 0 20px 20px 20px">
+              <a
+                href="contact.html"
+                class="btn-hotel-book"
+                style="
+                  display: block;
+                  text-align: center;
+                  text-decoration: none;
+                "
+                >Book a Ride</a
+              >
+            </div>
+          </div>
 
-                <!-- Card 8: Apoka Safari Lodge -->
-                <div class="hotel-card">
-                    <img src="images/apoka.png" alt="Apoka Safari Lodge" class="hotel-card-img">
-                    <div class="hotel-card-body">
-                        <div class="hotel-card-meta">
-                            <span class="hotel-location"><i class="fas fa-map-marker-alt"></i> Kidepo Valley</span>
-                            <span class="hotel-rating">Remote Luxury</span>
-                        </div>
-                        <h3>Apoka Safari Lodge</h3>
-                         <p>a luxury oasis nestled in the heart of Uganda’s remote Kidepo Valley National Park. Built entirely from local materials, the lodge blends into the golden savannah landscapes and rugged mountain backdrops.</p>
-                        <div class="hotel-card-action">
-                            <a href="contact.html" class="btn-hotel-book">Book a Ride</a> 
-                        </div>
-                    </div>
+          <!-- Card 8: Apoka Safari Lodge -->
+          <div
+            class="hotel-card"
+            style="
+              background: #ffffff;
+              border: 1px solid #e0e0e0;
+              border-radius: 8px;
+              overflow: hidden;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              height: 100%;
+              box-sizing: border-box;
+            "
+          >
+            <div>
+              <img
+                src="images/apoka.png"
+                alt="Apoka Safari Lodge"
+                class="hotel-card-img"
+                style="
+                  width: 100%;
+                  height: 220px;
+                  object-fit: cover;
+                  display: block;
+                "
+              />
+              <div class="hotel-card-body" style="padding: 20px">
+                <div
+                  class="hotel-card-meta"
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 12px;
+                    font-size: 13px;
+                  "
+                >
+                  <span class="hotel-location" style="color: #666666"
+                    ><i class="fas fa-map-marker-alt"></i> Kidepo Valley</span
+                  >
+                  <span
+                    class="hotel-rating"
+                    style="color: #cc9933; font-weight: 600"
+                    >Remote Luxury</span
+                  >
                 </div>
-                 <!-- Card 9: canan golden tulip  -->
-                <div class="hotel-card">
-                    <img src="images/canan.png" alt="Apoka Safari Lodge" class="hotel-card-img">
-                    <div class="hotel-card-body">
-                        <div class="hotel-card-meta">
-                            <span class="hotel-location"><i class="fas fa-map-marker-alt"></i> Kampala City</span>
-                            <span class="hotel-rating">Remote Luxury</span>
-                        </div>
-                        <h3>Apoka Safari Lodge</h3>
-                         <p>upscale, 4-star business and leisure hotel located in the prestigious Nakasero neighborhood within Kampala’s Central Business District. The property seamlessly blends sophisticated modern design with warm Ugandan hospitality, offering panoramic views overlooking the lush greenery of the Uganda Golf Club.</p>
-                        <div class="hotel-card-action">
-                            <a href="contact.html" class="btn-hotel-book">Book a Ride</a> 
-                        </div>
-                    </div>
+                <h3
+                  style="
+                    color: #0d2c1d;
+                    margin: 0 0 10px 0;
+                    font-size: 20px;
+                    font-weight: 600;
+                  "
+                >
+                  Apoka Safari Lodge
+                </h3>
+                <p
+                  style="
+                    color: #555555;
+                    font-size: 14px;
+                    line-height: 1.6;
+                    margin: 0;
+                  "
+                >
+                  A luxury oasis nestled in the heart of Uganda’s remote Kidepo
+                  Valley National Park. Built entirely from local materials, the
+                  lodge blends into the golden savannah landscapes and rugged
+                  mountain backdrops.
+                </p>
+              </div>
+            </div>
+            <div class="hotel-card-action" style="padding: 0 20px 20px 20px">
+              <a
+                href="contact.html"
+                class="btn-hotel-book"
+                style="
+                  display: block;
+                  text-align: center;
+                  text-decoration: none;
+                "
+                >Book a Ride</a
+              >
+            </div>
+          </div>
+
+          <!-- Card 9: Golden Tulip Canaan Kampala -->
+          <div
+            class="hotel-card"
+            style="
+              background: #ffffff;
+              border: 1px solid #e0e0e0;
+              border-radius: 8px;
+              overflow: hidden;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              height: 100%;
+              box-sizing: border-box;
+            "
+          >
+            <div>
+              <img
+                src="images/canan.png"
+                alt="Golden Tulip Canaan Kampala"
+                class="hotel-card-img"
+                style="
+                  width: 100%;
+                  height: 220px;
+                  object-fit: cover;
+                  display: block;
+                "
+              />
+              <div class="hotel-card-body" style="padding: 20px">
+                <div
+                  class="hotel-card-meta"
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 12px;
+                    font-size: 13px;
+                  "
+                >
+                  <span class="hotel-location" style="color: #666666"
+                    ><i class="fas fa-map-marker-alt"></i> Kampala City</span
+                  >
+                  <span
+                    class="hotel-rating"
+                    style="color: #cc9933; font-weight: 600"
+                    >4-Star Business</span
+                  >
                 </div>
-
-
+                <h3
+                  style="
+                    color: #0d2c1d;
+                    margin: 0 0 10px 0;
+                    font-size: 20px;
+                    font-weight: 600;
+                  "
+                >
+                  Golden Tulip Canaan Kampala
+                </h3>
+                <p
+                  style="
+                    color: #555555;
+                    font-size: 14px;
+                    line-height: 1.6;
+                    margin: 0;
+                  "
+                >
+                  An upscale, 4-star business and leisure hotel located in the
+                  prestigious Nakasero neighborhood within Kampala’s Central
+                  Business District. The property seamlessly blends
+                  sophisticated modern design with warm Ugandan hospitality,
+                  offering panoramic views overlooking the lush greenery of the
+                  Uganda Golf Club.
+                </p>
+              </div>
+            </div>
+            <div class="hotel-card-action" style="padding: 0 20px 20px 20px">
+              <a
+                href="contact.html"
+                class="btn-hotel-book"
+                style="
+                  display: block;
+                  text-align: center;
+                  text-decoration: none;
+                "
+                >Book a Ride</a
+              >
+            </div>
+          
+        </div>
+        <!-- Closes .hotel-grid-layout -->
+      
+      <!-- Closes .container -->
+    </section>
+    <!-- Closes .hotels-display -->
+  </body>
+</html>
