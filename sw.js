@@ -1,4 +1,4 @@
-// Bump VERSION whenever you change any precached file so users get the update.
+
 const VERSION = "v17";
 const STATIC_CACHE = `stanaland-static-${VERSION}`;
 const RUNTIME_CACHE = `stanaland-runtime-${VERSION}`;
@@ -18,17 +18,17 @@ const PRECACHE = [
   "script.js",
   "manifest.json",
 
-  // Home
+  
   "images/logo.png?v=3",
   "images/land.png",
   "images/lake.png",
   "images/lion.png",
 
-  // Services & fleet
+  
   "images/car.png",
   "images/cruiser.png",
 
-  // Hotels Rwanda
+  
   "images/Radisson.png",
   "images/one.png",
   "images/bisate.png",
@@ -39,7 +39,7 @@ const PRECACHE = [
   "images/Nyungwe.png",
   "images/MILLE.png",
 
-  // Hotels Uganda
+  
   "images/ukampala.png",
   "images/uhotel.png",
   "images/latitude.png",
@@ -50,7 +50,7 @@ const PRECACHE = [
   "images/apoka.png",
   "images/canan.png",
 
-  // Safaris
+  
   "images/Bwindi.png",
   "images/murchisson.png",
   "images/rwanda.png",
@@ -58,7 +58,7 @@ const PRECACHE = [
   "images/kazinga.png"
 ];
 
-// Cache files one by one so a single missing file does not break the whole install.
+
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(STATIC_CACHE)
@@ -86,13 +86,13 @@ self.addEventListener("fetch", (event) => {
   if (request.method !== "GET") return;
   if (!request.url.startsWith("http")) return;
 
-  // Pages: network first so content stays fresh, then cache, then the offline page.
+  
   if (request.mode === "navigate") {
     event.respondWith(networkFirst(request));
     return;
   }
 
-  // Images, CSS, JS, fonts: serve from cache instantly, refresh in the background.
+  
   event.respondWith(staleWhileRevalidate(request));
 });
 

@@ -1,6 +1,6 @@
-// =========================================================================
-// PWA: SERVICE WORKER REGISTRATION (runs on every page that loads this file)
-// =========================================================================
+
+
+
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", function () {
         navigator.serviceWorker.register("sw.js")
@@ -9,9 +9,9 @@ if ("serviceWorker" in navigator) {
     });
 }
 
-// =========================================================================
-// PWA: "INSTALL APP" BUTTON (appears only when the browser allows install)
-// =========================================================================
+
+
+
 let deferredInstallPrompt = null;
 
 window.addEventListener("beforeinstallprompt", function (event) {
@@ -54,23 +54,23 @@ function showInstallButton() {
     document.body.appendChild(btn);
 }
 
-// =========================================================================
-// GLOBAL PROCESSOR: Controls Home, Contact, Hotels, Fleet, & Safari Pages
-// =========================================================================
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Core Business Hotline (Standardized International Formatting)
+    
     const businessPhone = "256705629568";
 
     function openWhatsApp(message) {
-        const url = "https://wa.me/" + businessPhone + "?text=" + encodeURIComponent(message);
+        const url = "https:
         window.open(url, "_blank", "noopener");
     }
 
-    // ---- MODULE 1: AUTOMATED BACKGROUND HERO SLIDESHOW ----
+    
     function startHeroSlideshow() {
         const slides = document.querySelectorAll(".hero-slider .slide");
-        if (slides.length === 0) return; // Safely bypass if on a different page
+        if (slides.length === 0) return; 
 
         let currentSlideIndex = 0;
 
@@ -84,12 +84,12 @@ document.addEventListener("DOMContentLoaded", function () {
     startHeroSlideshow();
 
 
-    // ---- MODULE 2: DYNAMIC GRID LISTENER (Hotels, Services, Safaris) ----
+    
     document.addEventListener("click", function (event) {
         const button = event.target && event.target.closest ? event.target.closest(".btn-hotel-book") : null;
         if (!button) return;
 
-        event.preventDefault(); // Stop fallback jumps
+        event.preventDefault(); 
 
         const parentCard = button.closest(".hotel-card, .safari-card, .service-feature-card");
         let itemName = "";
@@ -117,11 +117,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // ---- MODULE 3: CONTACT US PAGE ENQUIRY FORM PROCESSOR ----
+    
     const contactForm = document.getElementById("contactPageForm");
     if (contactForm) {
         contactForm.addEventListener("submit", function (event) {
-            event.preventDefault(); // Terminate standard page reload loops
+            event.preventDefault(); 
 
             const name = document.getElementById("contactName").value.trim();
             const email = document.getElementById("contactEmail").value.trim();
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // ---- MODULE 4: HOMEPAGE ACTIONS ----
+    
     const whatsappChatBtn = document.querySelector(".btn-secondary");
     const exploreServicesBtn = document.querySelector(".btn-primary");
 
@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // ---- MODULE 5: DYNAMIC NAVIGATION ACTIVE STATE ----
+    
     (function initNavigation() {
         var navLinks = document.querySelectorAll('nav a');
         if (navLinks.length === 0) navLinks = document.querySelectorAll('.nav-menu a');
@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })();
 
 
-    // ---- MODULE 6: BACK BUTTON FOR MOBILE PWA ----
+    
     (function initBackButton() {
         var path = window.location.pathname;
         var file = path.split('/').pop() || 'index.html';

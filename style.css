@@ -10,12 +10,10 @@ body, html {
     width: 100%;
 }
 
-/* ==========================================
-   1. GLOBAL VARIABLES & SYSTEM RESET
-   ========================================== */
+
 :root {
-    --primary-color: #06341d; /* Signature Deep Green */
-    --accent-color: #cca43b;  /* Premium Gold */
+    --primary-color: #06341d; 
+    --accent-color: #cca43b;  
     --text-dark: #1f2937;
     --text-light: #ffffff;
     --bg-light: #f9fafb;
@@ -29,7 +27,7 @@ body, html {
     scroll-behavior: smooth;
 }
 
-/* Flex layout allows footers to sit cleanly at the bottom */
+
 body {
     background-color: #ffffff;
     color: var(--text-dark);
@@ -55,9 +53,7 @@ button {
     margin: 0 auto;
 }
 
-/* ==========================================
-   2. HEADER NAVIGATION BAR
-   ========================================== */
+
 header {
     background-color: var(--primary-color);
     color: var(--text-light);
@@ -134,33 +130,29 @@ nav ul li a:hover, nav ul li a.active {
     font-weight: 700;
 }
 
-/* ==========================================
-   3. HOMEPAGE HERO SHOWCASE 
-   ========================================== */
-/* ==========================================
-   3. HOMEPAGE HERO SHOWCASE WITH SLIDER FIX
-   ========================================== */
+
+
 .hero {
-    position: relative; /* Essential to lock background layers underneath text */
+    position: relative; 
     height: 75vh;
     display: flex;
     align-items: center;
     color: var(--text-light);
     width: 100%;
-    overflow: hidden; /* Stops wide images from spilling out of the screen */
+    overflow: hidden; 
 }
 
-/* New CSS container to control the sliding images layer */
+
 .hero-slider {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Sets slider in the background layer */
+    z-index: 1; 
 }
 
-/* Individual slides configuration */
+
 .slide {
     position: absolute;
     top: 0;
@@ -171,18 +163,18 @@ nav ul li a:hover, nav ul li a.active {
     background-position: center center;
     background-size: cover;
     opacity: 0;
-    transition: opacity 1.2s ease-in-out; /* Controls how fast images fade into each other */
+    transition: opacity 1.2s ease-in-out; 
 }
 
-/* Shows the active visible slide image */
+
 .slide.active {
     opacity: 1; 
 }
 
-/* Keeps your text content floating perfectly on top of the moving background */
+
 .hero-container {
     position: relative;
-    z-index: 2; /* Forces text to sit safely on top of the images layer */
+    z-index: 2; 
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -220,30 +212,28 @@ nav ul li a:hover, nav ul li a.active {
     display: flex;
     gap: 15px;
 }
-/* ==========================================
-   3. HOMEPAGE HERO SHOWCASE WITH SLIDER FIX
-   ========================================== */
+
 .hero {
-    position: relative; /* Essential to lock background layers underneath text */
+    position: relative; 
     height: 75vh;
     display: flex;
     align-items: center;
     color: var(--text-light);
     width: 100%;
-    overflow: hidden; /* Stops wide images from spilling out of the screen */
+    overflow: hidden; 
 }
 
-/* New CSS container to control the sliding images layer */
+
 .hero-slider {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Sets slider in the background layer */
+    z-index: 1; 
 }
 
-/* Individual slides configuration */
+
 .slide {
     position: absolute;
     top: 0;
@@ -254,18 +244,18 @@ nav ul li a:hover, nav ul li a.active {
     background-position: center center;
     background-size: cover;
     opacity: 0;
-    transition: opacity 1.2s ease-in-out; /* Controls how fast images fade into each other */
+    transition: opacity 1.2s ease-in-out; 
 }
 
-/* Shows the active visible slide image */
+
 .slide.active {
     opacity: 1; 
 }
 
-/* Keeps your text content floating perfectly on top of the moving background */
+
 .hero-container {
     position: relative;
-    z-index: 2; /* Forces text to sit safely on top of the images layer */
+    z-index: 2; 
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -331,9 +321,7 @@ nav ul li a:hover, nav ul li a.active {
     color: var(--primary-color);
 }
 
-/* ==========================================
-   4. HOME VALUES RIBBON BAR
-   ========================================== */
+
 .values-bar {
     background-color: #f3f4f6;
     padding: 22px 0;
@@ -362,13 +350,11 @@ nav ul li a:hover, nav ul li a.active {
     font-size: 18px;
 }
 
-/* ==========================================
-   5. CORE SERVICES & DISPLAYS 
-   ========================================== */
+
 .services-preview, .hotels-display, .fleet-showcase {
     padding: 80px 0;
     background-color: var(--bg-light);
-    flex: 1 0 auto; /* Fills remaining height safely */
+    flex: 1 0 auto; 
     width: 100%;
 }
 
@@ -447,9 +433,7 @@ nav ul li a:hover, nav ul li a.active {
     line-height: 1.6;
 }
 
-/* ==========================================
-   6. GLOBAL STRUCTURAL FOOTER
-   ========================================== */
+
 footer {
     margin-top: auto !important;
     background-color: var(--primary-color);
@@ -510,21 +494,17 @@ footer {
     width: 100%;
 }
 
-/* ==========================================
-   7. RESPONSIVE VIEWPORTS (MOBILE)
-   ========================================== */
+
 @media (max-width: 768px) {
     .header-container { flex-direction: column; gap: 15px; }
     nav ul { gap: 15px; flex-wrap: wrap; justify-content: center; }
     .hero-content h2 { font-size: 34px; }
     .hero-cta { flex-direction: column; }
 }
-/* ==========================================
-   8. HOTELS SPLIT-SCREEN LAYOUT CONFIG
-   ========================================== */
+
 .split-hotels-container {
     display: flex;
-    height: calc(100vh - 80px); /* Fills view height safely minus nav header */
+    height: calc(100vh - 80px); 
     overflow: hidden;
     width: 100%;
     flex: 1 0 auto;
@@ -542,7 +522,7 @@ footer {
     padding: 40px;
 }
 
-/* Fallback color gradients if you haven't assigned images inside your new images/ folder yet */
+
 .uganda-split {
     background: linear-gradient(rgba(6, 52, 29, 0.8), rgba(6, 52, 29, 0.9)), url('images/uganda-split.jpg') no-repeat center center/cover;
     background-color: var(--primary-color);
@@ -585,7 +565,7 @@ footer {
     transition: all 0.3s ease;
 }
 
-/* Hover Expanding Window Animations */
+
 .split-half:hover {
     flex: 1.2; 
 }
@@ -599,7 +579,7 @@ footer {
     color: var(--text-light);
 }
 
-/* Mobile responsive fallback vertical stack */
+
 @media (max-width: 768px) {
     .split-hotels-container {
         flex-direction: column;
@@ -610,9 +590,7 @@ footer {
     }
 }
 
-/* ==========================================
-   9. SAFARIS PAGE EXTENSION
-   ========================================== */
+
 .page-title-bar {
     padding: 60px 0;
     text-align: center;
@@ -728,9 +706,7 @@ footer {
 .btn-safari:hover {
     background-color: var(--accent-color);
     color: var(--primary-color);
-}/* ==========================================
-   Header and Gold Circle Logo
-   ========================================== */
+}
 .main-header {
     background-color: #0d2c1d;
     width: 100%;
@@ -805,9 +781,7 @@ nav a:hover {
     color: #cca43b;
 }
 
-/* ==========================================
-   Hero Banner Area
-   ========================================== */
+
 .page-title-bar {
     padding-top: 170px;
     padding-bottom: 40px;
@@ -823,9 +797,7 @@ nav a:hover {
     margin-top: 8px;
 }
 
-/* ==========================================
-   Perfectly Aligned Contact Info Cards
-   ========================================== */
+
 .contact-section {
     padding: 40px 0;
     background-color: #f9f9f9;
@@ -853,7 +825,7 @@ nav a:hover {
     display: flex;
     align-items: center;
     background-color: #ffffff;
-    border-left: 5px solid #cc9933; /* Keeps left lines perfectly parallel */
+    border-left: 5px solid #cc9933; 
     border-radius: 4px;
     padding: 25px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
@@ -866,7 +838,7 @@ nav a:hover {
 .icon-circle {
     width: 46px;
     height: 46px;
-    background-color: rgba(13, 44, 29, 0.08); /* Transparent matching green */
+    background-color: rgba(13, 44, 29, 0.08); 
     border-radius: 50%;
     margin-right: 20px;
     display: flex;
@@ -876,7 +848,7 @@ nav a:hover {
 }
 
 .icon-circle i {
-    color: #0d2c1d; /* Deep green icon tint */
+    color: #0d2c1d; 
     font-size: 18px;
 }
 
@@ -899,9 +871,7 @@ nav a:hover {
     justify-self: flex-start;
 }
 
-/* ==========================================
-   Right Panel: Form Layout
-   ========================================== */
+
 .contact-form-panel {
     width: 55%;
     background-color: #ffffff;
@@ -943,9 +913,7 @@ nav a:hover {
     cursor: pointer;
 }
 
-/* ==========================================
-   Footer
-   ========================================== */
+
 footer {
     background-color: #0d2c1d;
     color: #ffffff;
@@ -968,9 +936,7 @@ footer {
     padding-top: 20px;
 }
 
-/* ==========================================
-   11. HOTELS CARDS & LISTING ENGINE EXTENSION
-   ========================================== */
+
 .uganda-hotels-hero-bg {
     background: linear-gradient(rgba(6,52,29,0.85), rgba(6,52,29,0.9)), url('images/uganda-hotels-banner.jpg') no-repeat center center/cover;
 }
@@ -1001,7 +967,7 @@ footer {
     width: 100%;
     height: 220px;
     object-fit: cover;
-    background-color: #dddddd; /* Fallback gray box until you load real images */
+    background-color: #dddddd; 
 }
 
 .hotel-card-body {
@@ -1054,7 +1020,7 @@ footer {
 }
 
 .hotel-card-action {
-    margin-top: auto; /* Keeps all WhatsApp booking buttons lined up at the card bottoms */
+    margin-top: auto; 
 }
 
 .btn-hotel-book {
@@ -1074,9 +1040,7 @@ footer {
     background-color: var(--accent-color);
     color: var(--primary-color);
 }
-/* ==========================================
-   12. SERVICES & FLEET VEHICLE ENGINE EXTENSION
-   ========================================== */
+
 .services-hero-bg {
     background: linear-gradient(rgba(6,52,29,0.85), rgba(6,52,29,0.9)), url('images/services-hero.jpg') no-repeat center center/cover;
 }
@@ -1088,7 +1052,7 @@ footer {
 }
 .services-row-layout {
     display: grid;
-    /* Grid system automatically adapts columns layout elegantly for all 6 items */
+    
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
 }
@@ -1121,7 +1085,7 @@ footer {
     line-height: 1.6;
 }
 
-/* Fleet Panels Layout Section */
+
 .fleet-showcase-panel {
     padding: 60px 0 80px;
     background-color: var(--bg-light);
@@ -1217,30 +1181,28 @@ footer {
     color: var(--primary-color);
 }
 
-/* ==========================================
-   14. ADVANCED PREMIUM SERVICES BOXES STYLES
-   ========================================== */
+
 .service-feature-card {
-    padding: 0 !important; /* Resets outer borders to allow full background bleeding */
+    padding: 0 !important; 
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     border-radius: 8px;
     overflow: hidden;
-    border-top: none !important; /* Removes old flat green line */
+    border-top: none !important; 
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* Image Background Assignments */
-.s-bg-airport { background-image: url('https://unsplash.com'); }
-.s-bg-city { background-image: url('https://unsplash.com'); }
-.s-bg-upcountry { background-image: url('https://unsplash.com'); }
-.s-bg-hire { background-image: url('https://unsplash.com'); }
-.s-bg-deliveries { background-image: url('https://unsplash.com'); }
-.s-bg-border { background-image: url('https://unsplash.com'); }
 
-/* Beautiful inner transparent shadow layer to ensure white text pops readable */
+.s-bg-airport { background-image: url('https:
+.s-bg-city { background-image: url('https:
+.s-bg-upcountry { background-image: url('https:
+.s-bg-hire { background-image: url('https:
+.s-bg-deliveries { background-image: url('https:
+.s-bg-border { background-image: url('https:
+
+
 .card-inner-overlay {
     background: linear-gradient(to bottom, rgba(6, 52, 29, 0.82), rgba(3, 26, 15, 0.95));
     padding: 40px 30px;
@@ -1282,20 +1244,20 @@ footer {
 }
 
 .service-feature-card h3 {
-    color: var(--accent-color) !important; /* Highlights header titles in sleek gold */
+    color: var(--accent-color) !important; 
     font-size: 22px;
     margin-bottom: 12px;
 }
 
 .service-feature-card p {
-    color: rgba(255, 255, 255, 0.9) !important; /* Soft premium white text color */
+    color: rgba(255, 255, 255, 0.9) !important; 
     font-size: 14px;
     line-height: 1.6;
     margin-bottom: 25px;
 }
 
 .service-card-action {
-    margin-top: auto; /* Push buttons uniformly down */
+    margin-top: auto; 
     width: 100%;
 }
 
@@ -1311,17 +1273,13 @@ footer {
     color: var(--primary-color) !important;
 }
 
-/* Hover expansion effect */
+
 .service-feature-card:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
-/* ==========================================
-   MOBILE RESPONSIVE RULES (Screens under 768px)
-   ========================================== */
-/* ========================================================
-   UNIVERSAL RESPONSIVE OVERRIDE & HAMBURGER SYSTEM
-   ======================================================== */
+
+
 @media screen and (max-width: 768px) {
     body { padding-top: 0; margin: 0; }
     header { position: sticky; top: 0; z-index: 99999; margin: 0; }
@@ -1376,15 +1334,13 @@ footer {
         align-items: flex-start;
     }
 
-    /* ----------------------------------------------------
-       3. HAMBURGER MENU DROPDOWN SYSTEM
-       ---------------------------------------------------- */
-    /* Show the hamburger lines button icon */
+    
+    
     .hamburger-label {
         display: flex !important;
     }
 
-    /* Format header container to stay balanced horizontally */
+    
     .header-container {
         flex-direction: row !important; 
         justify-content: space-between !important;
@@ -1392,9 +1348,9 @@ footer {
         width: 100% !important;
     }
 
-    /* Transform the link group into a hidden dropdown menu block */
+    
     .nav-menu {
-        display: none !important; /* Hides menu block by default */
+        display: none !important; 
         flex-direction: column !important;
         position: absolute !important;
         top: 100% !important;
@@ -1408,12 +1364,12 @@ footer {
         z-index: 9999 !important;
     }
 
-    /* When hamburger check trigger is clicked, show menu links box */
+    
     #menu-toggle:checked ~ .nav-menu {
         display: flex !important;
     }
 
-    /* Interactive icon transformation into an 'X' close indicator */
+    
     #menu-toggle:checked ~ .hamburger-label span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
@@ -1424,12 +1380,10 @@ footer {
         transform: translateY(-9px) rotate(-45deg);
     }
 }
-/* ========================================================
-   NAVBAR MOBILE PROTECTION EXCLUSION
-   ======================================================== */
+
 @media screen and (max-width: 768px) {
     
-    /* Forces the nav element to stay flat horizontally so the button sits next to the logo */
+    
     nav {
         display: flex !important;
         flex-direction: row !important;
@@ -1438,10 +1392,10 @@ footer {
         position: relative !important;
     }
 
-    /* Force the hamburger button layout to maintain its dimensions */
+    
     .hamburger-label {
         display: flex !important;
-        flex-direction: column !important; /* The 3 bars must stack top-to-bottom */
+        flex-direction: column !important; 
         justify-content: space-between !important;
         width: 30px !important;
         height: 20px !important;
@@ -1449,42 +1403,40 @@ footer {
         z-index: 10001 !important;
     }
 
-    /* Make sure the 3 individual white horizontal lines display properly */
+    
     .hamburger-label span {
         display: block !important;
         height: 3px !important;
         width: 100% !important;
-        background-color: #ffffff !important; /* Force color to white */
+        background-color: #ffffff !important; 
         border-radius: 3px !important;
     }
 }
-/* ========================================================
-   CLEAN FLOATING MOBILE NAVIGATION DRAWER
-   ======================================================== */
+
 @media screen and (max-width: 768px) {
     
-    /* 1. Prevent the menu list from crunching up into the logo space */
+    
     .nav-menu {
-        display: none !important;        /* Hidden by default until clicked */
-        flex-direction: column !important; /* Stack links vertically */
+        display: none !important;        
+        flex-direction: column !important; 
         align-items: center !important;
         justify-content: center !important;
         
-        /* Position the dropdown directly under the header bar */
-        position: absolute !important;
-        top: 100% !important;            /* Positions it at the bottom edge of the header */
-        left: 0 !important;
-        width: 100% !important;          /* Take up the full width of the phone screen */
         
-        /* Style the dropdown menu look */
-        background-color: #0d2c1d !important; /* Match your deep green color */
+        position: absolute !important;
+        top: 100% !important;            
+        left: 0 !important;
+        width: 100% !important;          
+        
+        
+        background-color: #0d2c1d !important; 
         padding: 30px 0 !important;
-        gap: 20px !important;            /* Clean vertical spacing between menu links */
+        gap: 20px !important;            
         box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-        z-index: 99999 !important;       /* Floats over all page body elements */
+        z-index: 99999 !important;       
     }
 
-    /* 2. Format individual list entries to fill out line items */
+    
     .nav-menu li {
         width: 100% !important;
         display: block !important;
@@ -1493,61 +1445,59 @@ footer {
         padding: 0 !important;
     }
 
-    /* 3. Give text links plenty of tapping area for touch screens */
+    
     .nav-menu li a {
         display: inline-block !important;
         width: 80% !important;
         padding: 10px 0 !important;
-        font-size: 1.1rem !important;     /* Easy readability scaling */
+        font-size: 1.1rem !important;     
         letter-spacing: 0.5px !important;
     }
 
-    /* 4. Open the dropdown cleanly when the menu icon checkbox is toggled */
+    
     #menu-toggle:checked ~ .nav-menu {
-        display: flex !important;         /* Makes dropdown visible instantly */
+        display: flex !important;         
     }
 
-    /* 5. Force your main layout container to sit in place relative to the absolute dropdown positioning */
+    
     header {
         position: relative !important;
     }
 }
-/* ========================================================
-   ULTIMATE MOBILE NAVBAR FIXED OVERRIDE
-   ======================================================== */
+
 @media screen and (max-width: 768px) {
     
-    /* 1. Reset the nav element behavior */
+    
     header nav {
         display: block !important;
         position: static !important;
         width: auto !important;
     }
 
-    /* 2. Force the dropdown menu to break free from the side column constraints */
+    
     header ul.nav-menu {
-        display: none !important;           /* Hidden by default */
+        display: none !important;           
         position: absolute !important;
-        top: 100% !important;               /* Snaps directly below the dark header */
+        top: 100% !important;               
         left: 0 !important;
         right: 0 !important;
-        width: 100vw !important;            /* Forces menu to span 100% of the viewport width */
+        width: 100vw !important;            
         max-width: 100vw !important;
-        background-color: #0d2c1d !important; /* Full solid dark green background */
+        background-color: #0d2c1d !important; 
         padding: 25px 0 !important;
         margin: 0 !important;
         gap: 20px !important;
-        z-index: 999999 !important;         /* Floats completely over everything */
+        z-index: 999999 !important;         
         box-shadow: 0 10px 20px rgba(0,0,0,0.4);
     }
 
-    /* 3. When the checkbox is toggled, show the menu as a vertical flex column */
+    
     header #menu-toggle:checked ~ ul.nav-menu {
         display: flex !important;
         flex-direction: column !important;
     }
 
-    /* 4. Ensure individual list items take up full width inside the full-screen drawer */
+    
     header ul.nav-menu li {
         width: 100% !important;
         display: block !important;
@@ -1558,22 +1508,22 @@ footer {
     header ul.nav-menu li a {
         display: block !important;
         width: 100% !important;
-        font-size: 1.2rem !important;      /* Makes links large and easy to click */
+        font-size: 1.2rem !important;      
         color: #ffffff !important;
         padding: 10px 0 !important;
     }
 
-    /* 5. Fix the container header wrapper so the absolute menu bases its top from here */
+    
     header {
         position: sticky !important;
         top: 0 !important;
-        overflow: visible !important;       /* Crucial to allow the absolute menu to drop down outside of it */
+        overflow: visible !important;       
         z-index: 99999 !important;
     }
 
     .header-container {
         display: flex !important;
-        flex-direction: row !important;     /* Keeps logo and hamburger on the same horizontal line */
+        flex-direction: row !important;     
         justify-content: space-between !important;
         align-items: center !important;
         width: 100% !important;
@@ -1675,9 +1625,7 @@ header,
   .back-arrow { display: flex !important; }
 }
 
-/* ==========================================
-   CONTACT PAGE TYPOGRAPHY
-   ========================================== */
+
 .page-title-bar h2 {
     font-size: clamp(2.2rem, 5vw, 3rem);
     font-weight: 700;
