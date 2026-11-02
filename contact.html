@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#0d2c1d">
     <title>Contact Us | Stanaland Tour and Travel</title>
     
     <!-- FIXED: Replaced the broken link with a functional Font Awesome v6 CDN link -->
@@ -21,7 +24,7 @@
         <div class="logo" style="display: flex; align-items: center;">
             <a href="index.html" style="display: block; line-height: 0;">
                 <!-- Increased height to 115px so the text details are highly readable -->
-                <img src="images/logo.png" alt="Stanaland Tour and Travel Logo" style="height: 115px; width: auto; display: block; object-fit: contain;">
+                <img src="images/logo.png?v=3" alt="Stanaland Tour and Travel Logo">
             </a>
         </div>
         
@@ -40,7 +43,7 @@
     <!-- Your exact original list container and links with your inline styles -->
     <ul class="nav-menu" style="display: flex; list-style: none; margin: 0; padding: 0; gap: 25px; align-items: center;">
         <li><a href="index.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Home</a></li>
-        <li><a href="services.html" class="active" style="text-decoration: none; color: #cc9933; font-weight: 600;">Services & Fleet</a></li>
+        <li><a href="services.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Services & Fleet</a></li>
         <li><a href="hotels.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Hotels</a></li>
         <li><a href="safaris.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Safaris</a></li>
         <li><a href="contact.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Contact Us</a></li>
@@ -111,22 +114,22 @@
             <!-- Right Column: Interactive Booking Form -->
             <div class="contact-form-panel">
                 <h3>Send Us an Enquiry</h3>
-                <p>Fill out your details below to route an automated booking query to our desk.</p>
+                <p class="form-intro">Fill out your details below and we will get back to you shortly to discuss your travel plans and custom requests.</p>
                 
                 <form id="contactPageForm">
                     <div class="form-group">
                         <label for="contactName">Full Name</label>
-                        <input type="text" id="contactName" placeholder="Enter your name" required>
+                        <input type="text" id="contactName" placeholder="Enter your full name" required>
                     </div>
                     
                     <div class="form-group">
                         <label for="contactEmail">Email Address</label>
-                        <input type="email" id="contactEmail" placeholder="Enter your email" required>
+                        <input type="email" id="contactEmail" placeholder="Enter your email address" required>
                     </div>
 
                     <div class="form-group">
                         <label for="contactMessage">Your Message / Travel Specifications</label>
-                        <textarea id="contactMessage" rows="5" placeholder="Tell us about your trip dates, preferred fleet vehicle, or destinations..." required></textarea>
+                        <textarea id="contactMessage" rows="6" placeholder="Tell us about your travel plans, dates, or specific requirements..." required></textarea>
                     </div>
 
                     <button type="submit" class="btn-submit-contact">Submit via WhatsApp</button>

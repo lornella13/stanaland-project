@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#0d2c1d">
     <title>Top 9 Premium Hotels & Lodges in Rwanda | Stanaland Tour and Travel</title>
     <!-- Clean Shared Stylesheet Link -->
     <link rel="stylesheet" href="style.css">
@@ -17,10 +20,13 @@
     <div class="container header-container" style="display: flex; justify-content: space-between; align-items: center; padding: 5px 40px; max-width: 1200px; margin: 0 auto; box-sizing: border-box;">
         
         <!-- Logo Section -->
-        <div class="logo" style="display: flex; align-items: center;">
-            <a href="index.html" style="display: block; line-height: 0;">
+            <div class="logo" style="display: flex; align-items: center;">
+                <a href="hotels.html" class="back-arrow" aria-label="Back to hotels">
+                  <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+                </a>
+                <a href="index.html" style="display: block; line-height: 0;">
                 <!-- Increased height to 115px so the text details are highly readable -->
-                <img src="images/logo.png" alt="Stanaland Tour and Travel Logo" style="height: 115px; width: auto; display: block; object-fit: contain;">
+                <img src="images/logo.png?v=3" alt="Stanaland Tour and Travel Logo">
             </a>
         </div>
         
@@ -39,7 +45,7 @@
     <!-- Your exact original list container and links with your inline styles -->
     <ul class="nav-menu" style="display: flex; list-style: none; margin: 0; padding: 0; gap: 25px; align-items: center;">
         <li><a href="index.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Home</a></li>
-        <li><a href="services.html" class="active" style="text-decoration: none; color: #cc9933; font-weight: 600;">Services & Fleet</a></li>
+        <li><a href="services.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Services & Fleet</a></li>
         <li><a href="hotels.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Hotels</a></li>
         <li><a href="safaris.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Safaris</a></li>
         <li><a href="contact.html" style="text-decoration: none; color: #ffffff; font-weight: 500;">Contact Us</a></li>
@@ -206,3 +212,5 @@
                         </div>
                     </div>
                 </div>
+
+    <script src="script.js"></script>

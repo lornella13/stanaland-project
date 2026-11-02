@@ -1,3 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
 
 /* ==========================================
    1. GLOBAL VARIABLES & SYSTEM RESET
@@ -8,7 +19,6 @@
     --text-dark: #1f2937;
     --text-light: #ffffff;
     --bg-light: #f9fafb;
-    justify-content: space-between;
 }
 
 * {
@@ -17,7 +27,6 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     scroll-behavior: smooth;
-    justify-content: space-between;
 }
 
 /* Flex layout allows footers to sit cleanly at the bottom */
@@ -28,6 +37,16 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    justify-content: flex-start;
+    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input,
+textarea,
+button {
+    font-family: inherit;
+    font-size: 1rem;
 }
 
 .container {
@@ -101,7 +120,6 @@ nav ul li a {
     font-size: 14px;
     font-weight: 500;
     transition: color 0.3s ease;
-    justify-content: space-between;
 }
 
 nav ul li a:hover, nav ul li a.active {
@@ -395,6 +413,20 @@ nav ul li a:hover, nav ul li a.active {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     border-top: 4px solid var(--primary-color);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.preview-card .service-icon-box {
+    width: 64px;
+    height: 64px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.preview-card .service-icon-box i {
+    font-size: 30px;
 }
 
 .preview-card i {
@@ -419,7 +451,7 @@ nav ul li a:hover, nav ul li a.active {
    6. GLOBAL STRUCTURAL FOOTER
    ========================================== */
 footer {
-    margin-top: auto; 
+    margin-top: auto !important;
     background-color: var(--primary-color);
     color: var(--text-light);
     padding: 60px 0 20px;
@@ -495,6 +527,7 @@ footer {
     height: calc(100vh - 80px); /* Fills view height safely minus nav header */
     overflow: hidden;
     width: 100%;
+    flex: 1 0 auto;
 }
 
 .split-half {
@@ -755,15 +788,21 @@ footer {
     align-items: center;
 }
 
-.nav-menu a {
-    text-decoration: none;
+nav a {
     color: #ffffff;
-    font-weight: 500;
+    text-decoration: none;
 }
 
-.nav-menu a.active {
-    color: #cc9933;
+nav a.active,
+.nav-menu a.active,
+.navbar a.active,
+.nav-links a.active {
+    color: #cca43b !important;
     font-weight: 600;
+}
+
+nav a:hover {
+    color: #cca43b;
 }
 
 /* ==========================================
@@ -1215,7 +1254,7 @@ footer {
 
 .service-icon-box {
     background-color: var(--accent-color);
-    color: var(--primary-color);
+    color: #06341d;
     font-size: 24px;
     width: 60px;
     height: 60px;
@@ -1225,6 +1264,21 @@ footer {
     justify-content: center;
     margin-bottom: 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    flex-shrink: 0;
+}
+
+.fas,
+.fa-solid {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+}
+
+.service-icon-box i {
+    color: #06341d;
+    font-size: 36px;
+    display: inline-block;
+    visibility: visible;
+    opacity: 1;
 }
 
 .service-feature-card h3 {
@@ -1269,40 +1323,57 @@ footer {
    UNIVERSAL RESPONSIVE OVERRIDE & HAMBURGER SYSTEM
    ======================================================== */
 @media screen and (max-width: 768px) {
-    
-    /* ----------------------------------------------------
-       1. GLOBAL FORCE: TURNS EVERY ROW INTO A COLUMN
-       ---------------------------------------------------- */
-    *, div, section, main, form, footer, tr {
-        flex-direction: column !important;
-        grid-template-columns: 1fr !important;
-        box-sizing: border-box !important;
+    body { padding-top: 0; margin: 0; }
+    header { position: sticky; top: 0; z-index: 99999; margin: 0; }
+    .logo { display: flex; flex-direction: row; align-items: center; }
+    .split-hotels-container { height: auto; flex: 1 0 auto; }
+    .split-hotels-container .split-half { flex: 1; }
+
+    .hero-container,
+    .hero-content,
+    .values-container,
+    .services-preview .container,
+    .preview-grid,
+    .footer-container,
+    .contact-grid-layout,
+    .contact-info-panel,
+    .contact-form-panel,
+    .hotel-grid-layout,
+    .safari-packages-section .container,
+    .package-grid-layout,
+    .services-row-layout,
+    .fleet-cards-grid {
+        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 
-    div[class*="col"], div[class*="card"], div[class*="grid"], 
-    div[class*="panel"], div[class*="row"], td, th {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 100% !important;
-        display: block !important;
-        box-sizing: border-box !important;
-        float: none !important;
+    .values-container,
+    .footer-container,
+    .contact-grid-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .preview-grid,
+    .hotel-grid-layout,
+    .package-grid-layout,
+    .services-row-layout,
+    .fleet-cards-grid {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 
     img, video, iframe {
-        max-width: 100% !important;
-        width: 100% !important;
-        height: auto !important;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
     }
 
-    /* ----------------------------------------------------
-       2. RE-ALIGN ICON CARDS (EXCLUSION RULE)
-       Keeps icons left-to-right next to their text blocks
-       ---------------------------------------------------- */
     .info-card {
-        display: flex !important;
-        flex-direction: row !important; /* Forces row orientation for inner text cards only */
-        align-items: flex-start !important;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
     }
 
     /* ----------------------------------------------------
@@ -1494,8 +1565,10 @@ footer {
 
     /* 5. Fix the container header wrapper so the absolute menu bases its top from here */
     header {
-        position: relative !important;
+        position: sticky !important;
+        top: 0 !important;
         overflow: visible !important;       /* Crucial to allow the absolute menu to drop down outside of it */
+        z-index: 99999 !important;
     }
 
     .header-container {
@@ -1504,6 +1577,195 @@ footer {
         justify-content: space-between !important;
         align-items: center !important;
         width: 100% !important;
+    }
+}
+
+body { justify-content: flex-start !important; }
+footer { margin-top: auto !important; }
+.split-hotels-container { flex: 1 0 auto; }
+
+.logo img,
+.navbar .logo img,
+header .logo img {
+  height: 90px !important;
+  width: auto !important;
+  max-height: 90px !important;
+  max-width: 280px !important;
+  object-fit: contain;
+  display: block;
+}
+
+header,
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 5%;
+  min-height: 110px;
+  height: auto;
+}
+
+.header-container {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 0 !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+  min-height: 110px !important;
+  width: 90% !important;
+}
+
+.logo,
+.logo a {
+  height: auto !important;
+  width: auto !important;
+  flex-grow: 0 !important;
+}
+
+.back-arrow { display: none; align-items: center; justify-content: center; width: 44px; height: 44px; margin-right: 6px; color: #cca43b; text-decoration: none; flex-shrink: 0; }
+.back-arrow:hover { color: #ffffff; }
+
+@media screen and (max-width: 768px) {
+  .logo img,
+  .navbar .logo img,
+  header .logo img {
+      height: 65px !important;
+      max-height: 65px !important;
+      max-width: 200px !important;
+      width: auto !important;
+  }
+  header,
+  .navbar {
+      min-height: 90px;
+      padding: 10px 5%;
+  }
+  .header-container {
+      min-height: 90px !important;
+      padding: 0 !important;
+      width: 90% !important;
+  }
+  .back-arrow { display: flex !important; }
+  .logo { display: flex !important; flex-direction: row !important; align-items: center !important; }
+}
+
+@media screen and (max-width: 480px) {
+  .logo img,
+  .navbar .logo img,
+  header .logo img {
+      height: 50px !important;
+      max-height: 50px !important;
+      max-width: 160px !important;
+      width: auto !important;
+  }
+  header,
+  .navbar {
+      min-height: 75px;
+      padding: 8px 5%;
+  }
+  .header-container {
+      min-height: 75px !important;
+      padding: 0 !important;
+      width: 90% !important;
+  }
+}
+
+@media (display-mode: standalone) {
+  .back-arrow { display: flex !important; }
+}
+
+/* ==========================================
+   CONTACT PAGE TYPOGRAPHY
+   ========================================== */
+.page-title-bar h2 {
+    font-size: clamp(2.2rem, 5vw, 3rem);
+    font-weight: 700;
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.info-card .card-content h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.info-card .card-content p {
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #4a5a52;
+}
+
+.contact-form-panel h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.form-intro {
+     font-size: 0.9rem !important;
+     line-height: 1.5;
+     color: #5f6f66;
+     margin-top: 0;
+     margin-bottom: 28px !important;
+     font-weight: 400;
+}
+
+.contact-form-panel p {
+    font-size: 0.9rem;
+    color: #5f6f66;
+    line-height: 1.6;
+    margin-bottom: 28px;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #0d2c1d;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: inherit;
+}
+
+.btn-submit-contact {
+    width: 100%;
+    background-color: #0d2c1d;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+@media screen and (max-width: 480px) {
+    .contact-form-panel h3 {
+        font-size: 1.5rem;
+    }
+    .info-card .card-content h3 {
+        font-size: 1.2rem;
     }
 }
 
